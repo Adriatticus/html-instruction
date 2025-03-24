@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <title>Info Request</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="TWPIstyles.css" rel="stylesheet" />
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Sean Blessing</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">14900.0000000000</mso:Order>
+<mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
+<mso:_ExtendedDescription msdt:dt="string"></mso:_ExtendedDescription>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Sean Blessing</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+<mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
+<mso:ContentTypeId msdt:dt="string">0x0101005F87F8BAD7CCED4093A0CC5770C837E5</mso:ContentTypeId>
+<mso:TriggerFlowInfo msdt:dt="string"></mso:TriggerFlowInfo>
+<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+<mso:TaxCatchAll msdt:dt="string"></mso:TaxCatchAll>
+<mso:MediaServiceImageTags msdt:dt="string"></mso:MediaServiceImageTags>
+<mso:lcf76f155ced4ddcb4097134ff3c332f msdt:dt="string"></mso:lcf76f155ced4ddcb4097134ff3c332f>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <header>
+        Toy Web Pages Inc.  &#9786;
+    </header>
+
+    <nav>
+        <a href="default.html">Home</a> <a href="Toys.html">Toys</a> <a href="Sports.html">Sports</a> <a href="InfoRequest.html">More Information</a>
+    </nav>
+
+    <h2>Information Request Form</h2>
+
+    <section>
+
+        <form name="form1" method="GET" action="formresultsdummy.html">
+
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td>   <input type="text" name="firstName"> </td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td>    <input type="text" name="lastName"> </td>
+                </tr>
+
+                <tr>
+                    <td>Product Type:</td>
+                    <td>
+                        <input type="radio" name="prodType" value="Airplane"> Airplane<br>
+                        <input type="radio" name="prodType" value="Boat"> Boat<br>
+                        <input type="radio" name="prodType" value="Car"> Car/Truck<br>
+                        <input type="radio" name="prodType" value="Other"> Other<br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Comments:</td>
+                    <td>
+                        <textarea name="comments" rows="5" cols="50"
+                                  wrap="soft"></textarea>
+                    </td>
+                </tr>
+
+            </table>
+
+            <input type="hidden" name="contactType" value="infoRequest">
+
+            <br>
+            <button type="submit">Submit</button>
+            <br>
+            <input type="reset" value="Reset the form">
+
+        </form>
+
+    </section>
+    <footer>
+        Copyright &copy; 2017 TWPinc.   <a href="AboutUs.html">About</a>    <a href="Contact.html">Contact Us</a>    <a href="Privacy.html">Privacy</a>
+    </footer>
+
+
+</body>
+</html>

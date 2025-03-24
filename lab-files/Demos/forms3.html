@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<a href="index.html">Index</a>
+
+<h2>A form using new HTML 5 features</h2>
+You will need to test this in multiple broswers, and especially with phones and tablets! <br>
+Many of these are not implemented in most browsers.<br>
+When testing with phones and devices, watch to see if the keyboard style changes.<br><br>
+
+<form name="form1" method="GET" action="formresultsdummy.html">
+ <table>
+  <tr><td>Name: (required)</td><td><input type="text" name="username" required> </td><td>input type="text" required</td></tr>
+  <tr><td>Pick a color:</td><td>   <input type="color" name="somecolor"> </td><td>input type="color"</td></tr>
+
+  <tr><td>Date:</td><td>           <input type="date" name="date"> </td><td>input type="date"</td></tr>
+  <tr><td>DateTime:</td><td>       <input type="datetime" name="datetime"> </td><td>input type="datetime"</td></tr>
+  <tr><td>DateTime Local:</td><td> <input type="datetime-local" name="datetime"> </td><td>input type="datetime-local"</td></tr>
+  <tr><td>Order Month:</td><td>    <input type="month" name="orderMonth"> </td><td>input type="month"</td></tr>
+  <tr><td>Delivery Week:</td><td>  <input type="week" name="delWeek"> </td><td>input type="week"</td></tr>
+  <tr><td>Delivery Time:</td><td>  <input type="time" name="orderTime"> </td><td>input type="time"</td></tr>
+
+  <tr><td>Qty: (2-100)</td><td>    <input type="number" max="100" min="2" name="orderQty"> </td><td>input type="number" max="100" min="2"</td></tr>
+
+
+  <tr><td>Email:</td><td>          <input type="email" name="email"> </td><td>input type="email"</td></tr>
+  <tr><td>Telephone:</td><td>      <input type="tel" name="telephone"> </td><td>input type="tel"</td></tr>
+
+  <tr><td>Web page:</td><td>       <input type="url" name="webURL"> </td><td>input type="url"</td></tr>
+
+  <tr><td>Search:</td><td>         <input type="search" name="searchQuery"> </td><td>input type="search"</td></tr>
+
+
+  <tr><td>Toy Category</td><td> <input list="toys">
+                                <datalist id="toys">
+                                   <option value="Airplanes">
+                                   <option value="Boats">
+                                   <option value="Cars">
+                                   <option value="Helicopters">
+                                   <option value="Rockets">
+                                </datalist> 
+  </td><td>DataList</td></tr>
+
+
+ </table>
+
+
+ <br>
+ <button type="submit">Submit</button> 
+ <input type="reset" value="Reset the form">
+
+</form> 
+
+<br><br><br><br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68</pre></td><td><pre style="margin: 0; line-height: 125%">&lt;form name=<span style="color: #a31515">&quot;form1&quot;</span> method=<span style="color: #a31515">&quot;GET&quot;</span> action=<span style="color: #a31515">&quot;formresultsdummy.html&quot;</span>&gt;
+ &lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Name: (required)&lt;/td&gt;&lt;td&gt;&lt;input type=<span style="color: #a31515">&quot;text&quot;</span> name=<span style="color: #a31515">&quot;username&quot;</span> required&gt; 
+
+&lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;text&quot;</span> required&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Pick a color:&lt;/td&gt;&lt;td&gt;   &lt;input type=<span style="color: #a31515">&quot;color&quot;</span> name=<span style="color: #a31515">&quot;somecolor&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;color&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+
+  &lt;tr&gt;&lt;td&gt;Date:&lt;/td&gt;&lt;td&gt;           &lt;input type=<span style="color: #a31515">&quot;date&quot;</span> name=<span style="color: #a31515">&quot;date&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;date&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;DateTime:&lt;/td&gt;&lt;td&gt;       &lt;input type=<span style="color: #a31515">&quot;datetime&quot;</span> name=<span style="color: #a31515">&quot;datetime&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;datetime&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;DateTime Local:&lt;/td&gt;&lt;td&gt; &lt;input type=<span style="color: #a31515">&quot;datetime-local&quot;</span> name=<span style="color: #a31515">&quot;datetime&quot;</span>&gt; 
+
+&lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;datetime-local&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Order Month:&lt;/td&gt;&lt;td&gt;    &lt;input type=<span style="color: #a31515">&quot;month&quot;</span> name=<span style="color: #a31515">&quot;orderMonth&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;month&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Delivery Week:&lt;/td&gt;&lt;td&gt;  &lt;input type=<span style="color: #a31515">&quot;week&quot;</span> name=<span style="color: #a31515">&quot;delWeek&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;week&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Delivery Time:&lt;/td&gt;&lt;td&gt;  &lt;input type=<span style="color: #a31515">&quot;time&quot;</span> name=<span style="color: #a31515">&quot;orderTime&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;time&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+
+  &lt;tr&gt;&lt;td&gt;Qty: (2-100)&lt;/td&gt;&lt;td&gt;    &lt;input type=<span style="color: #a31515">&quot;number&quot;</span> max=<span style="color: #a31515">&quot;100&quot;</span> min=<span style="color: #a31515">&quot;2&quot;</span> name=<span style="color: #a31515">&quot;orderQty&quot;</span>&gt; 
+
+&lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;number&quot;</span> max=<span style="color: #a31515">&quot;100&quot;</span> min=<span style="color: #a31515">&quot;2&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+
+
+  &lt;tr&gt;&lt;td&gt;Email:&lt;/td&gt;&lt;td&gt;          &lt;input type=<span style="color: #a31515">&quot;email&quot;</span> name=<span style="color: #a31515">&quot;email&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;email&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Telephone:&lt;/td&gt;&lt;td&gt;      &lt;input type=<span style="color: #a31515">&quot;tel&quot;</span> name=<span style="color: #a31515">&quot;telephone&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;tel&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+
+  &lt;tr&gt;&lt;td&gt;Web page:&lt;/td&gt;&lt;td&gt;       &lt;input type=<span style="color: #a31515">&quot;url&quot;</span> name=<span style="color: #a31515">&quot;webURL&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;url&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+
+  &lt;tr&gt;&lt;td&gt;Search:&lt;/td&gt;&lt;td&gt;         &lt;input type=<span style="color: #a31515">&quot;search&quot;</span> name=<span style="color: #a31515">&quot;searchQuery&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input 
+
+type=<span style="color: #a31515">&quot;search&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+
+
+  &lt;tr&gt;&lt;td&gt;Toy Category&lt;/td&gt;&lt;td&gt; &lt;input list=<span style="color: #a31515">&quot;toys&quot;</span>&gt;
+                                &lt;datalist id=<span style="color: #a31515">&quot;toys&quot;</span>&gt;
+                                   &lt;option value=<span style="color: #a31515">&quot;Airplanes&quot;</span>&gt;
+                                   &lt;option value=<span style="color: #a31515">&quot;Boats&quot;</span>&gt;
+                                   &lt;option value=<span style="color: #a31515">&quot;Cars&quot;</span>&gt;
+                                   &lt;option value=<span style="color: #a31515">&quot;Helicopters&quot;</span>&gt;
+                                   &lt;option value=<span style="color: #a31515">&quot;Rockets&quot;</span>&gt;
+                                &lt;/datalist&gt; 
+  &lt;/td&gt;&lt;td&gt;DataList&lt;/td&gt;&lt;/tr&gt;
+
+
+ &lt;/table&gt;
+
+
+ &lt;br&gt;
+ &lt;button type=<span style="color: #a31515">&quot;submit&quot;</span>&gt;Submit&lt;/button&gt; 
+ &lt;input type=<span style="color: #a31515">&quot;reset&quot;</span> value=<span style="color: #a31515">&quot;Reset the form&quot;</span>&gt;
+
+&lt;/form&gt; 
+</pre></td></tr></table></div>
+
+
+
+</body>
+</html>

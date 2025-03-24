@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>test</title>
+
+</head>
+<body>
+
+<style type="text/css">
+
+  /* required for borders on tbody */
+  table { border-collapse: collapse; } 
+
+  /* add a border on the tbody */
+  tbody { border-width:1px; border-style:solid; }
+
+  /* additional styling */
+  thead { font-size:16pt; font-weight:bold; background-color:lightgray; }
+  tbody { font-size:12pt; }
+  tfoot { font-size:12pt; font-style:italic; background-color:lightgray; }
+
+  td:nth-child(2) { text-align:right; }
+
+</style>
+
+<table>
+  <caption><b>Menu</b></caption>
+  <thead>
+    <tr><td>Item</td><td>Price</td></tr>
+  </thead>
+
+  <tbody>
+    <tr><td>Salmon</td><td>$19.95</td></tr>
+    <tr><td>Catfish</td><td>$12.95</td></tr>
+    <tr><td>Trout</td><td>$24.95</td></tr>
+  </tbody>
+
+  <tbody>
+    <tr><td>Classic burger</td><td>$6.95</td></tr>
+    <tr><td>Cheese burger</td><td>$7.95</td></tr>
+    <tr><td>The Everything!</td><td>$8.95</td></tr>
+  </tbody>
+
+  <tbody>
+    <tr><td>Classic hot dog</td><td>$6.95</td></tr>
+    <tr><td>Super HOT dog</td><td>$7.95</td></tr>
+    <tr><td>Cheese dog</td><td>$8.95</td></tr>
+  </tbody>
+  <tfoot>
+    <tr><td>Total</td><td>$105.55</td></tr>
+  </tfoot>
+
+</table>
+
+</body>
+</html>

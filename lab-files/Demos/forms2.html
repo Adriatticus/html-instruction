@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<a href="index.html">Index</a>
+
+<h2>A basic pre-HTML 5 form</h2>
+
+
+<form name="form1" method="GET" action="formresultsdummy.html">
+
+ <table>
+  <tr><td>First Name:</td><td>   <input type="text" name="firstName"> </td><td>input type="text"</td></tr>
+  <tr><td>Last Name:</td><td>    <input type="text" name="lastName"> </td><td>input type="text"</td></tr>
+  <tr><td>Password:</td><td>     <input type="password" name="password"> </td><td>input type="password"</td></tr>
+  <tr><td>Payment Type:</td><td> <input type="radio" name="payment" value="cash"> Cash<br>
+                                 <input type="radio" name="payment" value="credit"> Credit<br>
+                                 <input type="radio" name="payment" value="voucher"> Voucher<br>
+  </td><td>input type="radio"</td></tr>
+  <tr><td>Options:</td><td>      <input type="checkbox" name="options" value="cash"> Rush shipping<br>
+                                 <input type="checkbox" name="options" value="wrap"> Gift wrap<br>
+                                 <input type="checkbox" name="options" value="confirm"> Delivery confirmation<br>
+  </td><td>input type="checkbox"</td></tr>
+
+  <tr><td>Picture:</td><td>      <input type="file" name="file1" accept="image/*"> </td><td>input type="file"</td></tr>
+
+  <tr><td>Comments:</td><td>     <textarea name="comments" rows=5 cols=50 wrap="soft"></textarea> </td><td>textarea</td></tr>
+
+  <tr><td>State:</td><td>        <select name="States">
+                                   <option value="CA">California</option>
+                                   <option value="NY">New York</option>
+                                   <option value="OH">Ohio</option>
+                                   <option value="TX">Texas</option>
+                                </select>                                
+  </td><td>select</td></tr>
+
+  <tr><td>State:</td><td>        <select name="States">
+                                   <optgroup label="Regional Offices">
+                                     <option value="CA">California</option>
+                                     <option value="NY">New York</option>
+                                   </optgroup> 
+                                   <optgroup label="Sales Offices">
+                                     <option value="OH">Ohio</option>
+                                     <option value="TX">Texas</option>
+                                   </optgroup> 
+                                </select>                                
+  </td><td>select with optgroup</td></tr>
+
+  <tr><td><label for="getsDiscount">Discount</label></td><td> <input id="getsDiscount" type="checkbox" name="discount"> </td><td>input type="checkbox" with label<br>Click "Discount" to toggle checkbox.</td></tr>
+
+ </table>
+
+ <input type="hidden" name="status" value="active">
+
+ <br>
+ Three kinds of submit buttons! (button, input type="image", input type="submit")<br>
+ <button type="submit">Submit</button> 
+ <input type="image" src="../images/clickmeButton.png" alt="Submit">
+ <input type="submit" value="Submit">
+ <br>
+ <br>
+ <input type="reset" value="Reset the form">
+
+</form> 
+
+<br><br><br>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55</pre></td><td><pre style="margin: 0; line-height: 125%">&lt;form name=<span style="color: #a31515">&quot;form1&quot;</span> method=<span style="color: #a31515">&quot;GET&quot;</span> action=<span style="color: #a31515">&quot;formresultsdummy.html&quot;</span>&gt;
+
+ &lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;First Name:&lt;/td&gt;&lt;td&gt;   &lt;input type=<span style="color: #a31515">&quot;text&quot;</span> name=<span style="color: #a31515">&quot;firstName&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;text&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Last Name:&lt;/td&gt;&lt;td&gt;    &lt;input type=<span style="color: #a31515">&quot;text&quot;</span> name=<span style="color: #a31515">&quot;lastName&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;text&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Password:&lt;/td&gt;&lt;td&gt;     &lt;input type=<span style="color: #a31515">&quot;password&quot;</span> name=<span style="color: #a31515">&quot;password&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;password&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Payment Type:&lt;/td&gt;&lt;td&gt; &lt;input type=<span style="color: #a31515">&quot;radio&quot;</span> name=<span style="color: #a31515">&quot;payment&quot;</span> value=<span style="color: #a31515">&quot;cash&quot;</span>&gt; Cash&lt;br&gt;
+                                 &lt;input type=<span style="color: #a31515">&quot;radio&quot;</span> name=<span style="color: #a31515">&quot;payment&quot;</span> value=<span style="color: #a31515">&quot;credit&quot;</span>&gt; Credit&lt;br&gt;
+                                 &lt;input type=<span style="color: #a31515">&quot;radio&quot;</span> name=<span style="color: #a31515">&quot;payment&quot;</span> value=<span style="color: #a31515">&quot;voucher&quot;</span>&gt; Voucher&lt;br&gt;
+  &lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;radio&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Options:&lt;/td&gt;&lt;td&gt;      &lt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;options&quot;</span> value=<span style="color: #a31515">&quot;cash&quot;</span>&gt; Rush shipping&lt;br&gt;
+                                 &lt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;options&quot;</span> value=<span style="color: #a31515">&quot;wrap&quot;</span>&gt; Gift wrap&lt;br&gt;
+                                 &lt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;options&quot;</span> value=<span style="color: #a31515">&quot;confirm&quot;</span>&gt; Delivery confirmation&lt;br&gt;
+  &lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+
+  &lt;tr&gt;&lt;td&gt;Picture:&lt;/td&gt;&lt;td&gt;      &lt;input type=<span style="color: #a31515">&quot;file&quot;</span> name=<span style="color: #a31515">&quot;file1&quot;</span> accept=<span style="color: #a31515">&quot;image/*&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;file&quot;</span>&lt;/td&gt;&lt;/tr&gt;
+
+  &lt;tr&gt;&lt;td&gt;Comments:&lt;/td&gt;&lt;td&gt;     &lt;textarea name=<span style="color: #a31515">&quot;comments&quot;</span> rows=5 cols=50 wrap=<span style="color: #a31515">&quot;soft&quot;</span>&gt;&lt;/textarea&gt; &lt;/td&gt;&lt;td&gt;textarea&lt;/td&gt;&lt;/tr&gt;
+
+  &lt;tr&gt;&lt;td&gt;State:&lt;/td&gt;&lt;td&gt;        &lt;select name=<span style="color: #a31515">&quot;States&quot;</span>&gt;
+                                   &lt;option value=<span style="color: #a31515">&quot;CA&quot;</span>&gt;California&lt;/option&gt;
+                                   &lt;option value=<span style="color: #a31515">&quot;NY&quot;</span>&gt;New York&lt;/option&gt;
+                                   &lt;option value=<span style="color: #a31515">&quot;OH&quot;</span>&gt;Ohio&lt;/option&gt;
+                                   &lt;option value=<span style="color: #a31515">&quot;TX&quot;</span>&gt;Texas&lt;/option&gt;
+                                &lt;/select&gt;                                
+  &lt;/td&gt;&lt;td&gt;select&lt;/td&gt;&lt;/tr&gt;
+
+  &lt;tr&gt;&lt;td&gt;State:&lt;/td&gt;&lt;td&gt;        &lt;select name=<span style="color: #a31515">&quot;States&quot;</span>&gt;
+                                   &lt;optgroup label=<span style="color: #a31515">&quot;Regional Offices&quot;</span>&gt;
+                                     &lt;option value=<span style="color: #a31515">&quot;CA&quot;</span>&gt;California&lt;/option&gt;
+                                     &lt;option value=<span style="color: #a31515">&quot;NY&quot;</span>&gt;New York&lt;/option&gt;
+                                   &lt;/optgroup&gt; 
+                                   &lt;optgroup label=<span style="color: #a31515">&quot;Sales Offices&quot;</span>&gt;
+                                     &lt;option value=<span style="color: #a31515">&quot;OH&quot;</span>&gt;Ohio&lt;/option&gt;
+                                     &lt;option value=<span style="color: #a31515">&quot;TX&quot;</span>&gt;Texas&lt;/option&gt;
+                                   &lt;/optgroup&gt; 
+                                &lt;/select&gt;                                
+  &lt;/td&gt;&lt;td&gt;select with optgroup&lt;/td&gt;&lt;/tr&gt;
+
+  &lt;tr&gt;&lt;td&gt;&lt;label for=<span style="color: #a31515">&quot;getsDiscount&quot;</span>&gt;Discount&lt;/label&gt;&lt;/td&gt;&lt;td&gt; &lt;input id=<span style="color: #a31515">&quot;getsDiscount&quot;</span> type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;discount&quot;</span>&gt; &lt;/td&gt;&lt;td&gt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> with label&lt;br&gt;Click <span style="color: #a31515">&quot;Discount&quot;</span> to toggle checkbox.&lt;/td&gt;&lt;/tr&gt;
+
+ &lt;/table&gt;
+
+ &lt;input type=<span style="color: #a31515">&quot;hidden&quot;</span> name=<span style="color: #a31515">&quot;status&quot;</span> value=<span style="color: #a31515">&quot;active&quot;</span>&gt;
+
+ &lt;br&gt;
+ Three kinds of submit buttons! (button, input type=<span style="color: #a31515">&quot;image&quot;</span>, input type=<span style="color: #a31515">&quot;submit&quot;</span>)&lt;br&gt;
+ &lt;button type=<span style="color: #a31515">&quot;submit&quot;</span>&gt;Submit&lt;/button&gt; 
+ &lt;input type=<span style="color: #a31515">&quot;image&quot;</span> src=<span style="color: #a31515">&quot;../images/clickmeButton.png&quot;</span> alt=<span style="color: #a31515">&quot;Submit&quot;</span>&gt;
+ &lt;input type=<span style="color: #a31515">&quot;submit&quot;</span> value=<span style="color: #a31515">&quot;Submit&quot;</span>&gt;
+ &lt;br&gt;
+ &lt;br&gt;
+ &lt;input type=<span style="color: #a31515">&quot;reset&quot;</span> value=<span style="color: #a31515">&quot;Reset the form&quot;</span>&gt;
+
+&lt;/form&gt; 
+</pre></td></tr></table></div>
+
+
+</body>
+</html>

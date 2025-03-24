@@ -1,0 +1,58 @@
+﻿body { 
+    background-color: lightgray;
+    font-size:18px;
+    color:black;
+    font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family:"Comic Sans MS", cursive;
+    color:#FF6300 !important;
+}  
+
+h2[style*="italic"] {
+    font-style:normal !important;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border: width 2px;
+}
+
+
+header {
+    color: lightgray;
+    font-size:48px;
+    text-align:center;
+    border:3px solid;
+    border-color: black;
+    background-color:#FF6300;
+    padding:40px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif,
+}
+
+nav a:hover {
+    background-color: #FF6300;
+    color: lightgray;
+}
+
+nav a {
+    color: lightgray;
+    background: black;
+    text-decoration:none;
+    border:1px solid;
+    border-radius:5px 5px 0 0;
+    margin-right:-5px;
+    padding:5px;
+}
+
+xnav a.hover {
+    text-decoration:underline;
+}
+
+
+nav {
+    text-decoration-color: white !important;
+    border-bottom:1px solid;
+    margin-top:10px;
+    padding-bottom:5px;
+}
+

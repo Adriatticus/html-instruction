@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Forms 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<a href="index.html">Index</a><br><br><br>
+
+<h2>A very basic form using only JavaScript</h2>
+
+<form name="form1">
+
+  First Name: <input type="text" name="firstName">
+  Last Name: <input type="text" name="lastName">
+
+  <button onclick="alert('Welcome ' + 
+                          form1.firstName.value + ' ' + 
+                          form1.lastName.value)"
+  >Click me!</button>
+
+
+</form> 
+
+<h2>A basic form that submits to another page using GET</h2>
+
+<form name="form2" method="GET" action="formresultsdummy.html">
+
+  First Name: <input type="text" name="firstName">
+  Last Name: <input type="text" name="lastName">
+
+  <button>Click me!</button>
+
+
+</form> 
+
+
+<h2>File upload. (server page does not exist!) </h2>
+
+<form action="formresultsdummy.html" method="get" enctype="multipart/form-data">
+  Picture title: <input type="text" name="title" value=""> <br>
+  Picture:  <input type="file" name="file1" accept="image/*"> <br>
+  Thumbnail image:  <input type="file" name="file2"><br>
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

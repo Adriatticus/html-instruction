@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Colors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<a href="index.html">Index</a><br><br><br>
+
+
+<style>
+  div { margin:1px }
+</style>
+
+<div style="width:200px;color:white">
+<div style="background-color:red">red</div>
+<br>
+<div style="background-color:#f00">#f00</div>
+<br>
+<div style="background-color:#ff0000">#ff0000</div>
+<br>
+<div style="background-color:green">green</div>
+<br>
+<div style="background-color:hsl(240, 100%, 50%);">hsl(180, 0%, 50%);</div>
+<br>
+<div style="background-color:blue">blue</div>
+<br>
+<div style="background-color:grey">grey</div>
+<br>
+<div style="background-color:gray">gray</div>
+</div>
+
+
+<br>
+Create a color using values from 00 to FF:<br>
+
+Red:    <input id=red type=text value=ff> 
+Green:  <input id=green type=text value=00> 
+Blue:   <input id=blue type=text value=00> 
+<button onclick="setcolor(true);return false;">Set color</button>
+
+<br><br>
+<div id=colorbox style="float:left;border:1px solid;width:100px;height:100px;background-color:red">Colors!</div>
+<div id=out style="float:left"></div>
+
+<div style="clear:both">
+Or use sliders: <br>
+  Red: <input id=redslider type=range max=255 min=0 value=255 oninput="setcolor2()" onchange="setcolor2()">
+  Green: <input id=greenslider type=range max=255 min=0 value=0 oninput="setcolor2()" onchange="setcolor2()">
+  Blue: <input id=blueslider type=range max=255 min=0 value=0 oninput="setcolor2()" onchange="setcolor2()">
+  <!-- note both onchange and oninput are needed to get a consistent real time change in both IE and Firefox -->
+
+</div>
+
+
+
+<script>
+// button click
+function setcolor(frombutton)
+{
+
+  var vred    = ("00"+document.getElementById("red").value).slice(-2);
+  var vgreen  = ("00"+document.getElementById("green").value).slice(-2);
+  var vblue   = ("00"+document.getElementById("blue").value).slice(-2);
+  var color  = "#"+ vred + "" + vgreen + "" + vblue;
+document.getElementById("out").innerText = color
+  document.getElementById("colorbox").setAttribute("style", 
+   "float:left;border:1px solid;width:100px;height:100px;background-color:" + color);  
+
+  if (frombutton)
+  {
+    document.getElementById("redslider").value = parseInt(vred, 16);
+    document.getElementById("greenslider").value = parseInt(vgreen, 16);
+    document.getElementById("blueslider").value = parseInt(vblue, 16);
+  }
+}
+
+//sliders
+function setcolor2()
+{
+  //event.stopImmediatePropagation()
+  var vred    = document.getElementById("redslider").value;
+  var vgreen  = document.getElementById("greenslider").value;
+  var vblue   = document.getElementById("blueslider").value;
+  document.getElementById("red").value = ("00" + parseInt(vred).toString(16)).slice(-2);
+  document.getElementById("green").value = ("00" + parseInt(vgreen).toString(16)).slice(-2);
+  document.getElementById("blue").value = ("00" + parseInt(vblue).toString(16)).slice(-2);
+
+  setcolor(false);
+}
+
+</script>
+
+<br><br>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;style&gt;
+  div { <span style="color: #0000ff">margin</span>:1px }
+&lt;/style&gt;
+
+&lt;div style=<span style="color: #a31515">&quot;width:200px;color:white&quot;</span>&gt;
+&lt;div style=<span style="color: #a31515">&quot;background-color:red&quot;</span>&gt;red&lt;/div&gt;
+&lt;br&gt;
+&lt;div style=<span style="color: #a31515">&quot;background-color:#f00&quot;</span>&gt;#f00&lt;/div&gt;
+&lt;br&gt;
+&lt;div style=<span style="color: #a31515">&quot;background-color:#ff0000&quot;</span>&gt;#ff0000&lt;/div&gt;
+&lt;br&gt;
+&lt;div style=<span style="color: #a31515">&quot;background-color:green&quot;</span>&gt;green&lt;/div&gt;
+&lt;br&gt;
+&lt;div style=<span style="color: #a31515">&quot;background-color:hsl(240, 100%, 50%);&quot;</span>&gt;hsl(180, 0%, 50%);&lt;/div&gt;
+&lt;br&gt;
+&lt;div style=<span style="color: #a31515">&quot;background-color:blue&quot;</span>&gt;blue&lt;/div&gt;
+&lt;br&gt;
+&lt;div style=<span style="color: #a31515">&quot;background-color:grey&quot;</span>&gt;grey&lt;/div&gt;
+&lt;br&gt;
+&lt;div style=<span style="color: #a31515">&quot;background-color:gray&quot;</span>&gt;gray&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;br&gt;
+Create a color using values from 00 to FF:&lt;br&gt;
+
+Red:    &lt;input id=<span style="color: #a31515">red</span> type=<span style="color: #a31515">text</span> value=<span style="color: #a31515">ff</span>&gt; 
+Green:  &lt;input id=<span style="color: #a31515">green</span> type=<span style="color: #a31515">text</span> value=<span style="color: #a31515">00</span>&gt; 
+Blue:   &lt;input id=<span style="color: #a31515">blue</span> type=<span style="color: #a31515">text</span> value=<span style="color: #a31515">00</span>&gt; 
+&lt;button onclick=<span style="color: #a31515">&quot;setcolor(true);return false;&quot;</span>&gt;Set color&lt;/button&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;div id=<span style="color: #a31515">colorbox</span> style=<span style="color: #a31515">&quot;float:left;border:1px solid;width:100px;height:100px;background-color:red&quot;</span>&gt;Colors!&lt;/div&gt;
+&lt;div id=<span style="color: #a31515">out</span> style=<span style="color: #a31515">&quot;float:left&quot;</span>&gt;&lt;/div&gt;
+
+&lt;div style=<span style="color: #a31515">&quot;clear:both&quot;</span>&gt;
+Or use sliders: &lt;br&gt;
+  Red: &lt;input id=<span style="color: #a31515">redslider</span> type=<span style="color: #a31515">range</span> max=<span style="color: #a31515">255</span> min=<span style="color: #a31515">0</span> value=<span style="color: #a31515">255</span> oninput=<span style="color: #a31515">&quot;setcolor2()&quot;</span> onchange=<span style="color: #a31515">&quot;setcolor2()&quot;</span>&gt;
+  Green: &lt;input id=<span style="color: #a31515">greenslider</span> type=<span style="color: #a31515">range</span> max=<span style="color: #a31515">255</span> min=<span style="color: #a31515">0</span> value=<span style="color: #a31515">0</span> oninput=<span style="color: #a31515">&quot;setcolor2()&quot;</span> onchange=<span style="color: #a31515">&quot;setcolor2()&quot;</span>&gt;
+  Blue: &lt;input id=<span style="color: #a31515">blueslider</span> type=<span style="color: #a31515">range</span> max=<span style="color: #a31515">255</span> min=<span style="color: #a31515">0</span> value=<span style="color: #a31515">0</span> oninput=<span style="color: #a31515">&quot;setcolor2()&quot;</span> onchange=<span style="color: #a31515">&quot;setcolor2()&quot;</span>&gt;
+  <span style="color: #008000">&lt;!-- note both onchange and oninput are needed to get a consistent real time change in both IE and Firefox --&gt;</span>
+
+&lt;/div&gt;
+
+
+
+&lt;script&gt;
+<span style="color: #008000">// button click</span>
+<span style="color: #0000ff">function</span> setcolor(frombutton)
+{
+
+  <span style="color: #0000ff">var</span> vred    = (<span style="color: #a31515">&quot;00&quot;</span>+document.getElementById(<span style="color: #a31515">&quot;red&quot;</span>).value).slice(-2);
+  <span style="color: #0000ff">var</span> vgreen  = (<span style="color: #a31515">&quot;00&quot;</span>+document.getElementById(<span style="color: #a31515">&quot;green&quot;</span>).value).slice(-2);
+  <span style="color: #0000ff">var</span> vblue   = (<span style="color: #a31515">&quot;00&quot;</span>+document.getElementById(<span style="color: #a31515">&quot;blue&quot;</span>).value).slice(-2);
+  <span style="color: #0000ff">var</span> color  = <span style="color: #a31515">&quot;#&quot;</span>+ vred + <span style="color: #a31515">&quot;&quot;</span> + vgreen + <span style="color: #a31515">&quot;&quot;</span> + vblue;
+document.getElementById(<span style="color: #a31515">&quot;out&quot;</span>).innerText = color
+  document.getElementById(<span style="color: #a31515">&quot;colorbox&quot;</span>).setAttribute(<span style="color: #a31515">&quot;style&quot;</span>, 
+   <span style="color: #a31515">&quot;float:left;border:1px solid;width:100px;height:100px;background-color:&quot;</span> + color);  
+
+  <span style="color: #0000ff">if</span> (frombutton)
+  {
+    document.getElementById(<span style="color: #a31515">&quot;redslider&quot;</span>).value = parseInt(vred, 16);
+    document.getElementById(<span style="color: #a31515">&quot;greenslider&quot;</span>).value = parseInt(vgreen, 16);
+    document.getElementById(<span style="color: #a31515">&quot;blueslider&quot;</span>).value = parseInt(vblue, 16);
+  }
+}
+
+<span style="color: #008000">//sliders</span>
+<span style="color: #0000ff">function</span> setcolor2()
+{
+  <span style="color: #008000">//event.stopImmediatePropagation()</span>
+  <span style="color: #0000ff">var</span> vred    = document.getElementById(<span style="color: #a31515">&quot;redslider&quot;</span>).value;
+  <span style="color: #0000ff">var</span> vgreen  = document.getElementById(<span style="color: #a31515">&quot;greenslider&quot;</span>).value;
+  <span style="color: #0000ff">var</span> vblue   = document.getElementById(<span style="color: #a31515">&quot;blueslider&quot;</span>).value;
+  document.getElementById(<span style="color: #a31515">&quot;red&quot;</span>).value = (<span style="color: #a31515">&quot;00&quot;</span> + parseInt(vred).toString(16)).slice(-2);
+  document.getElementById(<span style="color: #a31515">&quot;green&quot;</span>).value = (<span style="color: #a31515">&quot;00&quot;</span> + parseInt(vgreen).toString(16)).slice(-2);
+  document.getElementById(<span style="color: #a31515">&quot;blue&quot;</span>).value = (<span style="color: #a31515">&quot;00&quot;</span> + parseInt(vblue).toString(16)).slice(-2);
+
+  setcolor(<span style="color: #0000ff">false</span>);
+}
+
+&lt;/script&gt;
+</pre></div>
+
+
+</body>
+</html>

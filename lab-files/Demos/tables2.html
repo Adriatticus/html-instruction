@@ -1,0 +1,53 @@
+﻿<style type="text/css">
+  table { border-collapse:collapse }
+
+  table tr td { ; border-width:1px; border-style:solid;  }
+
+  td { white-space: nowrap; }
+
+  xtd:nth-child(1) { font-weight:bold; }  /* menu item */
+  xtd:nth-child(2) { text-align:right; }  /* price */
+  xtd:nth-child(3) { font-style:italic; } /* notes */
+  xtd:first-child { color:red }
+  xtr:nth-child(even) { background-color:lightgray }
+
+</style>
+
+
+<table>
+  <caption>Today's fish</caption>
+  <tr><th>Salmon</th><td>$19.95</td></tr>
+  <tr><th>Catfish</td><td>$12.95</td></tr>
+  <tr><th>Trout</th><td>$24.95</td></tr>
+</table>
+
+
+<table>
+  <tr><th>Salmon</th><td style="width:100px;">$19.95</td></tr>
+  <tr><th>Catfish</td><td>$12.95</td><td>test</td><td>test</td><td>test</td><td>test</td></tr>
+  <tr><th>Trout</th><td>$24.95</td></tr>
+</table>
+
+
+
+
+<table>
+  <tr><td colspan=3>Fish</td></tr>
+  <tr><td>Salmon</td><td style="width:100px;" class=price>$19.95</td><td>fresh!</td></tr>
+  <tr><td>Catfish</td><td class=price>$12.95</td><td>fresh!</td></tr>
+  <tr><td>Trout</td><td class=price>$24.95</td><td>frozen</td></tr>
+
+  <tr><td colspan=3>Burgers</td></tr>
+  <tr><td>Classic burger</td><td style="width:50px;" class=price>$6.95</td><td rowspan=3>Comes<br>with<br>fries!</td></tr>
+  <tr><td>Cheese burger</td><td class=price>$7.95</td></tr>
+  <tr><td>The Everything!</td><td class=price>$8.95</td></tr>
+
+  <tr><td colspan=3>Dogs</td></tr>
+  <tr><td>Classic hot dog</td><td class=price>$6.95</td><td rowspan=3>Bun<br>or<br>bread</td></tr>
+  <tr><td>Super HOT dog</td><td class=price>$7.95</td></tr>
+  <tr><td>Cheese dog</td><td class=price>$8.95</td></tr>
+</table>
+
+
+
+

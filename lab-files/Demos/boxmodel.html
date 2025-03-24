@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Box Model</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    div { height:50px; width:100px; border:1px solid; }
+  </style>
+
+</head>
+<body>
+
+<h1>CSS Box Model Examples</h1>
+
+  Total width is content width (100px) plus border (2*5px).
+  <div>DIV with 1px border</div>
+  <div style="border:10px solid;">DIV with 10px border</div>
+
+  <br>
+  Two DIVs with no margin.
+  <div>DIV with 1px border</div>
+  <div>DIV with 1px border</div>
+
+  <br>
+  Top DIV has a 2px bottom margins.
+  <div style="margin-bottom:2px">DIV with 1px border</div>
+  <div>DIV with 1px border</div>
+
+  <br>
+  Top DIV has a 5px padding. Total width is content width (100px) plus padding (2*5px).
+  <div style="padding:5px">DIV with 1px border</div>
+  <div>DIV with 1px border</div>
+
+  <br>
+  Top DIV has a 10px border and 5px padding. Total width is content width (100px) plus border (2*10px) plus padding (2*5px).
+  <div style="border:10px solid; padding:5px">DIV with 1px border</div>
+  <div>DIV with 1px border</div>
+
+  <br>
+  <br>
+  H1 with a 1 px border. By default the width is 100%.
+  <h1 style="border:1px solid;">This is an H1 tag</h1>
+
+  <br>
+  H1 with a 1 px border and a width of 300px.
+  <h1 style="border:1px solid; width:300px;">This is an H1 tag</h1>
+
+  <br>
+  This is a P tag with a 1 px border and a width of 300px.
+  <p style="border:1px solid; width:300px;">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+  </p>
+
+  <br>
+  This is a P tag with a 1 px border, a width of 300px and a padding of 10px.
+  <p style="border:1px solid; width:300px; padding:10px; ">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+  </p>
+
+  <br>
+  This is a P tag with a 1 px border, a width of 300px, a padding of 10px and a margin of 20px.
+  <p style="border:1px solid; width:300px; padding:10px; margin:20px ">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+  </p>
+
+  <br>
+  This has a span with no width or height set, but has a border of 1px.<br>
+  This is a <span style="border:1px solid;">span with a border</span> in a line of text.<br>
+
+  <br>
+  This has a span with no width set, but has a height set to 50px. Height and width are 
+  ignored on inline objects by default.<br>
+  This is a <span style="width:500px; border:1px solid;">span with a border</span> in a line of text.<br>
+
+  <br>
+  This has a span with no width set, but has a height set to 50px and "display:inline-block". Height and width are 
+  ignored on inline objects by default, but are honored on items displayed as a block.<br>
+  This is a <span style="height:50px; border:1px solid; display:inline-block;">span with a border</span> in a line of text.<br>
+  More text on the next line.
+  <br><br>
+
+  <br>
+  This DIV has a height of 50px and a width of 100px, and too much text, 
+  which flows out of the bottom overwriting anything below it.
+  <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.</div>
+  <div>DIV with 1px border</div>
+  <br><br><br>
+
+  <br>
+  This DIV has a height of 50px and a width of 100px, and too much text, 
+  but also has "overflow:scroll;" and scrollbars.
+  <div style="overflow:scroll;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.</div>
+  <div>DIV with 1px border</div>
+  <br>
+
+  <br>
+  This DIV has a height of 50px and a width of 100px, and too much text, 
+  but also has "overflow-x: hidden; overflow-y: scroll;" and scrollbars.
+  <div style="overflow-x: hidden; overflow-y: scroll;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.</div>
+  <div>DIV with 1px border</div>
+  <br>
+     
+
+
+<br><br><br>
+<!-- HTML generated using hilite.me --><div style="height:100%;background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87</pre></td><td><pre style="margin: 0; line-height: 125%">  Total width is content width (100px) plus border (2*5px).
+  &lt;div&gt;DIV with 1px border&lt;/div&gt;
+  &lt;div style=<span style="color: #a31515">&quot;border:10px solid;&quot;</span>&gt;DIV with 10px border&lt;/div&gt;
+
+  &lt;br&gt;
+  Two DIVs with no margin.
+  &lt;div&gt;DIV with 1px border&lt;/div&gt;
+  &lt;div&gt;DIV with 1px border&lt;/div&gt;
+
+  &lt;br&gt;
+  Top DIV has a 2px bottom margins.
+  &lt;div style=<span style="color: #a31515">&quot;margin-bottom:2px&quot;</span>&gt;DIV with 1px border&lt;/div&gt;
+  &lt;div&gt;DIV with 1px border&lt;/div&gt;
+
+  &lt;br&gt;
+  Top DIV has a 5px padding. Total width is content width (100px) plus padding (2*5px).
+  &lt;div style=<span style="color: #a31515">&quot;padding:5px&quot;</span>&gt;DIV with 1px border&lt;/div&gt;
+  &lt;div&gt;DIV with 1px border&lt;/div&gt;
+
+  &lt;br&gt;
+  Top DIV has a 10px border and 5px padding. Total width is content width (100px) plus border (2*10px) plus padding (2*5px).
+  &lt;div style=<span style="color: #a31515">&quot;border:10px solid; padding:5px&quot;</span>&gt;DIV with 1px border&lt;/div&gt;
+  &lt;div&gt;DIV with 1px border&lt;/div&gt;
+
+  &lt;br&gt;
+  &lt;br&gt;
+  H1 with a 1 px border. By default the width is 100%.
+  &lt;h1 style=<span style="color: #a31515">&quot;border:1px solid;&quot;</span>&gt;This is an H1 tag&lt;/h1&gt;
+
+  &lt;br&gt;
+  H1 with a 1 px border and a width of 300px.
+  &lt;h1 style=<span style="color: #a31515">&quot;border:1px solid; width:300px;&quot;</span>&gt;This is an H1 tag&lt;/h1&gt;
+
+  &lt;br&gt;
+  This is a P tag with a 1 px border and a width of 300px.
+  &lt;p style=<span style="color: #a31515">&quot;border:1px solid; width:300px;&quot;</span>&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+  &lt;/p&gt;
+
+  &lt;br&gt;
+  This is a P tag with a 1 px border, a width of 300px and a padding of 10px.
+  &lt;p style=<span style="color: #a31515">&quot;border:1px solid; width:300px; padding:10px; &quot;</span>&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+  &lt;/p&gt;
+
+  &lt;br&gt;
+  This is a P tag with a 1 px border, a width of 300px, a padding of 10px and a margin of 20px.
+  &lt;p style=<span style="color: #a31515">&quot;border:1px solid; width:300px; padding:10px; margin:20px &quot;</span>&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+  &lt;/p&gt;
+
+  &lt;br&gt;
+  This has a span with no width or height set, but has a border of 1px.&lt;br&gt;
+  This is a &lt;span style=<span style="color: #a31515">&quot;border:1px solid;&quot;</span>&gt;span with a border&lt;/span&gt; in a line of text.&lt;br&gt;
+
+  &lt;br&gt;
+  This has a span with no width set, but has a height set to 50px. Height and width are 
+  ignored on inline objects by default.&lt;br&gt;
+  This is a &lt;span style=<span style="color: #a31515">&quot;width:500px; border:1px solid;&quot;</span>&gt;span with a border&lt;/span&gt; in a line of text.&lt;br&gt;
+
+  &lt;br&gt;
+  This has a span with no width set, but has a height set to 50px and &quot;display:inline-block&quot;. Height and width are 
+  ignored on inline objects by default, but are honored on items displayed as a block.&lt;br&gt;
+  This is a &lt;span style=<span style="color: #a31515">&quot;height:50px; border:1px solid; display:inline-block;&quot;</span>&gt;span with a border&lt;/span&gt; in a line of text.&lt;br&gt;
+  More text on the next line.
+  &lt;br&gt;&lt;br&gt;
+
+  &lt;br&gt;
+  This DIV has a height of 50px and a width of 100px, and too much text, 
+  which flows out of the bottom overwriting anything below it.
+  &lt;div&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.&lt;/div&gt;
+  &lt;div&gt;DIV with 1px border&lt;/div&gt;
+  &lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;br&gt;
+  This DIV has a height of 50px and a width of 100px, and too much text, 
+  but also has &quot;overflow:scroll;&quot; and scrollbars.
+  &lt;div style=<span style="color: #a31515">&quot;overflow:scroll;&quot;</span>&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.&lt;/div&gt;
+  &lt;div&gt;DIV with 1px border&lt;/div&gt;
+  &lt;br&gt;
+
+  &lt;br&gt;
+  This DIV has a height of 50px and a width of 100px, and too much text, 
+  but also has &quot;overflow-x: hidden; overflow-y: scroll;&quot; and scrollbars.
+  &lt;div style=<span style="color: #a31515">&quot;overflow-x: hidden; overflow-y: scroll;&quot;</span>&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa.&lt;/div&gt;
+  &lt;div&gt;DIV with 1px border&lt;/div&gt;
+  &lt;br&gt;
+</pre></td></tr></table></div>
+
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Gradients</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<a href="index.html">Index</a><br><br><br>
+
+<style>
+  div[id="demo"] div { width:200px; height:100px; }
+  h2 {font-size:16px}
+</style>
+
+<h1>Gradients</h1>
+
+<p>In CSS 3, gradients come in two flavors: linear and radial. Gradients are defined using these patterns:</p>
+<ul>
+ <li>Default (top to bottom)<br>
+  property: linear-gradient(<em>startColor, color, color, endColor</em>)<br>
+   &nbsp;&nbsp;background: linear-gradient(yellow, green) </li>
+ <li>With a direction:<br>
+  property: linear-gradient(<em>directionToStartFrom, startColor, endColor</em>)<br>
+  direction= to left, to right, to top, to bottom<br>
+   &nbsp;&nbsp;background: linear-gradient(to top, yellow, green) </li>
+ <li>With a direction (diagonal):<br>
+  property: linear-gradient(<em>directionToStartFrom, startColor, endColor</em>)<br>
+  direction= to bottom left, to bottom right, to top right, etc. <br>
+   &nbsp;&nbsp;background: linear-gradient(to top right, yellow, green) </li>
+ <li>With any angle:<br>
+  property: linear-gradient(<em>angle, startColor, endColor</em>)<br>
+   &nbsp;&nbsp;background: linear-gradient(30deg, yellow, green) </li>
+ <li>Radial gradient:<br>
+  property: radial-gradient(<em>startColor, color, color, endColor</em>)<br>
+   &nbsp;&nbsp;background: radial-gradient(yellow, green) </li>
+ <li>Radial gradient:<br>
+  property: radial-gradient(<em>startColor, color, color, endColor</em>)<br>
+  shape= ellipse (default), circle  <br>
+   &nbsp;&nbsp;background: radial-gradient(circle, yellow, green) </li>
+</ul>
+
+<div id=demo>
+<h2>background:linear-gradient(yellow, green)</h2>
+    <div style="background:linear-gradient(yellow, green)">
+    </div><br />
+
+<h2>background:linear-gradient(yellow, blue, green)</h2>
+    <div style="background:linear-gradient(yellow, blue, green)">
+    </div><br />
+
+<h2>background:linear-gradient(to top, yellow, green)</h2>
+    <div style="background:linear-gradient(to top, yellow, green)">
+    </div><br />
+<h2>background:linear-gradient(to top right, yellow, green)</h2>
+    <div style="background:linear-gradient(to top right, yellow, green)">
+    </div><br />
+<h2>background:linear-gradient(15deg, yellow, green)</h2>
+    <div style="background:linear-gradient(15deg, yellow, green)">
+    </div><br />
+<h2>&nbsp;&nbsp;background: radial-gradient(yellow, green)</h2>
+    <div style="background: radial-gradient(yellow, green) ">
+    </div><br />
+<h2>&nbsp;&nbsp;background: radial-gradient(circle, yellow, green)</h2>
+    <div style="background: radial-gradient(circle, yellow, green); ">
+    </div><br />
+</div>
+
+
+<br><br><br>
+
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></td><td><pre style="margin: 0; line-height: 125%">&lt;h2&gt;background:linear-gradient(yellow, green)&lt;/h2&gt;
+    &lt;div style=<span style="color: #a31515">&quot;background:linear-gradient(yellow, green)&quot;</span>&gt;
+    &lt;/div&gt;&lt;br /&gt;
+
+&lt;h2&gt;background:linear-gradient(yellow, blue, green)&lt;/h2&gt;
+    &lt;div style=<span style="color: #a31515">&quot;background:linear-gradient(yellow, blue, green)&quot;</span>&gt;
+    &lt;/div&gt;&lt;br /&gt;
+
+&lt;h2&gt;background:linear-gradient(to top, yellow, green&lt;/h2&gt;
+    &lt;div style=<span style="color: #a31515">&quot;background:linear-gradient(to top, yellow, green)&quot;</span>&gt;
+    &lt;/div&gt;&lt;br /&gt;
+&lt;h2&gt;background:linear-gradient(to top right, yellow, green)&lt;/h2&gt;
+    &lt;div style=<span style="color: #a31515">&quot;background:linear-gradient(to top right, yellow, green)&quot;</span>&gt;
+    &lt;/div&gt;&lt;br /&gt;
+&lt;h2&gt;background:linear-gradient(15deg, yellow, green)&lt;/h2&gt;
+    &lt;div style=<span style="color: #a31515">&quot;background:linear-gradient(15deg, yellow, green)&quot;</span>&gt;
+    &lt;/div&gt;&lt;br /&gt;
+&lt;h2&gt;&amp;nbsp;&amp;nbsp;background: radial-gradient(yellow, green)&lt;/h2&gt;
+    &lt;div style=<span style="color: #a31515">&quot;background: radial-gradient(yellow, green) &quot;</span>&gt;
+    &lt;/div&gt;&lt;br /&gt;
+&lt;h2&gt;&amp;nbsp;&amp;nbsp;background: radial-gradient(circle, yellow, green)&lt;/h2&gt;
+    &lt;div style=<span style="color: #a31515">&quot;background: radial-gradient(circle, yellow, green); &quot;</span>&gt;
+    &lt;/div&gt;&lt;br /&gt;
+</pre></td></tr></table></div>
+
+</body>
+</html>

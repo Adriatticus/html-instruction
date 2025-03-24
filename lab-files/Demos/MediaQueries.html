@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Media Queries</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+
+    /* CSS common the all devices and resolutions */
+
+    body { background-color:lightgray; }
+    h1 { color:red; font-size:24pt; }
+    h2 { color:blue; font-size:20pt; }
+    #top { color:blue; text-align:center; }
+    header { width:100%; font-size:36px; text-align:center;  }
+    #left { width:25%; float:left; }
+    article { width:75%; float:right; background-color:white; }
+    footer { border:1px solid; clear:both; text-align:center; }
+
+    /* hide the left nav for small screens */
+
+    @media (max-width: 400px) 
+    {
+      h1 { font-size:18pt; }
+      h2 { font-size:16pt; }      
+      #left { display:none; }
+      article { width:100%; float:none; }
+    }
+
+    /* hide the left nav and top nav when printing */
+
+    @media print {
+      
+      #top { display:none; }
+      #left { display:none; }
+      article { width:100%; float:none; }
+    }
+
+  </style>
+
+</head>
+<body>
+  <a href="index.html">Index</a><br><br><br>
+  Resize the page to see the changes.<br><br>
+
+  <header>Company Name Goes Here</header>
+
+  <nav id=top>Home Products Contact Search</nav>
+
+  <nav id=left>Nav<br>goes<br>here<br></nav>
+
+  <article>
+    <h1>Main content here</h1>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.<br><br> 
+  </article>
+
+  <footer>Copyright &copy; 2017</footer>
+
+
+<br><br><br>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60</pre></td><td><pre style="margin: 0; line-height: 125%">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+  &lt;title&gt;Media Queries&lt;/title&gt;
+  &lt;meta name=<span style="color: #a31515">&quot;viewport&quot;</span> content=<span style="color: #a31515">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;
+
+  &lt;style&gt;
+
+    <span style="color: #008000">/* CSS common the all devices and resolutions */</span>
+
+    body { <span style="color: #0000ff">background-color</span>:lightgray; }
+    h1 { <span style="color: #0000ff">color</span>:red; <span style="color: #0000ff">font-size</span>:24pt; }
+    h2 { <span style="color: #0000ff">color</span>:blue; <span style="color: #0000ff">font-size</span>:20pt; }
+    #top { <span style="color: #0000ff">color</span>:blue; <span style="color: #0000ff">text-align</span>:<span style="color: #0000ff">center</span>; }
+    header { <span style="color: #0000ff">width</span>:100%; <span style="color: #0000ff">font-size</span>:36px; <span style="color: #0000ff">text-align</span>:<span style="color: #0000ff">center</span>;  }
+    #left { <span style="color: #0000ff">width</span>:25%; <span style="color: #0000ff">float</span>:<span style="color: #0000ff">left</span>; }
+    article { <span style="color: #0000ff">width</span>:75%; <span style="color: #0000ff">float</span>:<span style="color: #0000ff">right</span>; <span style="color: #0000ff">background-color</span>:white; }
+    footer { <span style="color: #0000ff">border</span>:1px <span style="color: #0000ff">solid</span>; <span style="color: #0000ff">clear</span>:<span style="color: #0000ff">both</span>; <span style="color: #0000ff">text-align</span>:<span style="color: #0000ff">center</span>; }
+
+    <span style="color: #008000">/* hide the left nav for small screens */</span>
+
+    <span style="color: #0000ff">@media</span> (max-width: 400px) 
+    {
+      h1 { <span style="color: #0000ff">font-size</span>:18pt; }
+      h2 { <span style="color: #0000ff">font-size</span>:16pt; }      
+      #left { <span style="color: #0000ff">display</span>:<span style="color: #0000ff">none</span>; }
+      article { <span style="color: #0000ff">width</span>:100%; <span style="color: #0000ff">float</span>:<span style="color: #0000ff">none</span>; }
+    }
+
+    <span style="color: #008000">/* hide the left nav and top nav when printing */</span>
+
+    <span style="color: #0000ff">@media</span> print {
+      
+      #top { <span style="color: #0000ff">display</span>:<span style="color: #0000ff">none</span>; }
+      #left { <span style="color: #0000ff">display</span>:<span style="color: #0000ff">none</span>; }
+      article { <span style="color: #0000ff">width</span>:100%; <span style="color: #0000ff">float</span>:<span style="color: #0000ff">none</span>; }
+    }
+
+  &lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;a href=<span style="color: #a31515">&quot;index.html&quot;</span>&gt;Index&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;header&gt;Company Name Goes Here&lt;/header&gt;
+
+  &lt;nav id=top&gt;Home Products Contact Search&lt;/nav&gt;
+
+  &lt;nav id=left&gt;Nav&lt;br&gt;goes&lt;br&gt;here&lt;br&gt;&lt;/nav&gt;
+
+  &lt;article&gt;
+    &lt;h1&gt;Main content here&lt;/h1&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.&lt;br&gt;&lt;br&gt; 
+  &lt;/article&gt;
+
+  &lt;footer&gt;Copyright &amp;copy; 2017&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table></div>
+
+</body>
+</html>

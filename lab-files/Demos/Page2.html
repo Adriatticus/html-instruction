@@ -1,0 +1,20 @@
+
+<div id="results"></div>
+
+<script>
+
+  //get the query string
+  var queryString = window.location.search;
+  //remove the leading question mark;
+  queryString = queryString.substring(1);
+  
+  //get the parameters as an array
+  var params = queryString.split("&")
+alert(params)
+  //write the string
+  //document.getElementById("results").innerText = queryString;
+  for (var i=0; i<params.length; i++)
+  {
+    document.getElementById("results").innerHTML += params[i] + "<br/>";
+  }
+</script>

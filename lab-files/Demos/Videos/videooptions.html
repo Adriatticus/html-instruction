@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Options</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      .videocssdemo {  border:5px red solid; opacity: 0.4; position:absolute; top:20px; left:30px; transition: 2s }
+      .videocssdemo:hover { transform:rotate(45deg); transition: 2s }
+    </style>
+</head>
+<body>
+<h1>Videos - Options</h1>
+
+<form method=GET action="videooptions.html">
+<input type="checkbox" name="Autoplay" value="autoplay"> Autoplay<br>
+<input type="checkbox" name="Controls" value="controls"> Controls<br>
+<input type="checkbox" name="Muted" value="muted"> Muted<br>
+<input type="checkbox" name="Loop" value="loop"> Loop<br>
+<input type="checkbox" name="Poster" value="poster=poster.png"> Poster='poster.png'<br>
+<input type="checkbox" name="AddCSS" value="class='videocssdemo'"> Add some CSS!  class='videocssdemo'<br>
+
+<input type="submit" value="Try it!"/>
+</form>
+<br>
+<hr>
+
+
+<!-- display area for the HTML 5 video -->
+<div id="videoarea"></div>
+
+
+<!-- JavaScript to read the Query String for options -->
+<script>
+ var url = window.location.href;
+ var parts = url.split('?');
+ if (parts.length==1)
+  { document.getElementById('videoarea').innerHTML = '<b>Select one or more options</b>'; }
+  else
+  {
+    var options = parts[1].split('&');
+    var text = "";
+    for (var i=0; i<options.length; i++)
+    {
+      text += unescape(options[i].split('=')[1]) + ' ';
+    }
+    document.getElementById('videoarea').innerHTML = ' \
+      &lt;video id="video" width="320" height=178   \
+      src="snow320x178.mp4" type="video/mp4"  ' + text +' &gt;<br>  \
+      \
+      <video id="video" width="320" height=178 ' + text +' > \
+        <source src="snow320x178.mp4" type="video/mp4"> \
+        Your browser does not support the video tag.  \
+      </video>'
+  }
+</script>
+
+<hr>
+Notes:<br>
+<ul>
+  <li>You may need to mouse over the video to see the controls</li>
+  <li>"Loop" also needs "Controls" or "Autoplay".</li>
+  <li>iOS 10 / Safari 10 will only autoplay if the audio is disabled or there is no audio.</li>
+  <li>CSS: (mouse over the video to see the animation)<br>
+      .videocssdemo {  border:5px red solid; opacity: 0.4; position:absolute; top:20px; left:30px; transition: 2s }<br>
+      .videocssdemo:hover { transform:rotate(45deg); transition: 2s }
+
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br>
+<hr>
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;<span#FF0000">!</span>DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Video Options&lt;/title&gt;
+    &lt;meta name=<span style="color: #a31515">&quot;viewport&quot;</span> content=<span style="color: #a31515">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;
+
+    &lt;style&gt;
+      .videocssdemo {  border:5px red solid; opacity: 0.4; position:absolute; top:20px; left:30px; transition: 2s }
+      .videocssdemo:hover { transform:rotate(45deg); transition: 2s }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Videos - Options&lt;/h1&gt;
+
+&lt;form method=GET action=<span style="color: #a31515">&quot;videooptions.html&quot;</span>&gt;
+&lt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;Autoplay&quot;</span> value=<span style="color: #a31515">&quot;autoplay&quot;</span>&gt; Autoplay&lt;br&gt;
+&lt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;Controls&quot;</span> value=<span style="color: #a31515">&quot;controls&quot;</span>&gt; Controls&lt;br&gt;
+&lt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;Muted&quot;</span> value=<span style="color: #a31515">&quot;muted&quot;</span>&gt; Muted&lt;br&gt;
+&lt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;Loop&quot;</span> value=<span style="color: #a31515">&quot;loop&quot;</span>&gt; Loop&lt;br&gt;
+&lt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;Poster&quot;</span> value=<span style="color: #a31515">&quot;poster=poster.png&quot;</span>&gt; Poster=<span style="color: #a31515">&#39;poster.png&#39;</span>&lt;br&gt;
+&lt;input type=<span style="color: #a31515">&quot;checkbox&quot;</span> name=<span style="color: #a31515">&quot;AddCSS&quot;</span> value=<span style="color: #a31515">&quot;class=&#39;videocssdemo&#39;&quot;</span>&gt; Add some CSS<span#FF0000">!</span>  class=<span style="color: #a31515">&#39;videocssdemo&#39;</span>&lt;br&gt;
+
+&lt;input type=<span style="color: #a31515">&quot;submit&quot;</span> value=<span style="color: #a31515">&quot;Try it!&quot;</span>/&gt;
+&lt;/form&gt;
+&lt;br&gt;
+&lt;hr&gt;
+
+
+&lt;<span#FF0000">!</span>-- display area <span style="color: #0000ff">for</span> the HTML 5 video --&gt;
+&lt;div id=<span style="color: #a31515">&quot;videoarea&quot;</span>&gt;&lt;/div&gt;
+
+
+&lt;<span#FF0000">!</span>-- JavaScript to read the Query String <span style="color: #0000ff">for</span> options --&gt;
+&lt;script&gt;
+ var url = window.location.href;
+ var parts = url.split(<span style="color: #a31515">&#39;?&#39;</span>);
+ <span style="color: #0000ff">if</span> (parts.length==1)
+  { document.getElementById(<span style="color: #a31515">&#39;videoarea&#39;</span>).innerHTML = <span style="color: #a31515">&#39;&lt;b&gt;Select one or more options&lt;/b&gt;&#39;</span>; }
+  <span style="color: #0000ff">else</span>
+  {
+    var options = parts[1].split(<span style="color: #a31515">&#39;&amp;&#39;</span>);
+    var text = <span style="color: #a31515">&quot;&quot;</span>;
+    <span style="color: #0000ff">for</span> (var i=0; i&lt;options.length; i++)
+    {
+      text += unescape(options[i].split(<span style="color: #a31515">&#39;=&#39;</span>)[1]) + <span style="color: #a31515">&#39; &#39;</span>;
+    }
+    document.getElementById(<span style="color: #a31515">&#39;videoarea&#39;</span>).innerHTML = <span style="color: #a31515">&#39; \</span>
+<span style="color: #a31515">      &amp;lt;video id=&quot;video&quot; width=&quot;320&quot; height=178   \</span>
+<span style="color: #a31515">      src=&quot;snow320x178.mp4&quot; type=&quot;video/mp4&quot;  &#39;</span> + text +<span style="color: #a31515">&#39; &amp;gt;&lt;br&gt;  \</span>
+<span style="color: #a31515">      \</span>
+<span style="color: #a31515">      &lt;video id=&quot;video&quot; width=&quot;320&quot; height=178 &#39;</span> + text +<span style="color: #a31515">&#39; &gt; \</span>
+<span style="color: #a31515">        &lt;source src=&quot;snow320x178.mp4&quot; type=&quot;video/mp4&quot;&gt; \</span>
+<span style="color: #a31515">        Your browser does not support the video tag.  \</span>
+<span style="color: #a31515">      &lt;/video&gt;&#39;</span>
+  }
+&lt;/script&gt;
+
+&lt;hr&gt;
+Notes:&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;You may need to mouse over the video to see the controls&lt;/li&gt;
+  &lt;li&gt;<span style="color: #a31515">&quot;Loop&quot;</span> also needs <span style="color: #a31515">&quot;Controls&quot;</span> <span style="color: #0000ff">or</span> <span style="color: #a31515">&quot;Autoplay&quot;</span>.&lt;/li&gt;
+  &lt;li&gt;iOS 10 / Safari 10 will only autoplay <span style="color: #0000ff">if</span> the audio <span style="color: #0000ff">is</span> disabled <span style="color: #0000ff">or</span> there <span style="color: #0000ff">is</span> no audio.&lt;/li&gt;
+  &lt;li&gt;CSS: (mouse over the video to see the animation)&lt;br&gt;
+      .videocssdemo {  border:5px red solid; opacity: 0.4; position:absolute; top:20px; left:30px; transition: 2s }&lt;br&gt;
+      .videocssdemo:hover { transform:rotate(45deg); transition: 2s }
+
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+
+</body>
+</html>

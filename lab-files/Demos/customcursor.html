@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS and Cursors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<a href="index.html">Index</a><br><br><br>
+
+Slide your mouse over each link...
+<br><br>
+
+
+The defalt cursor: <br>
+<a href="help.html">Help!</a>
+
+<br><br>
+A predefined curor ("help")<br>
+<a style="cursor:help" href="help.html">Help!</a>
+
+<br><br>
+A custom curor using face.cur<br>
+<a style="cursor:url(face.cur), auto" href="help.html">Help!</a>
+<br><br>
+
+
+A custom curor using fallbacks: face.jpeg, face.cur and auto<br>
+<style>
+ a.help {
+    cursor: help;
+    cursor: url(face.cur), help;  /* try this 2nd (for IE) */
+    cursor: url(face.jpeg) 4 12, help; /* try this 1st */
+ }
+</style>
+<a class="help" href="help.html">Help!</a>
+<br><br>
+
+
+<pre>
+The defalt cursor: &lt;br>
+&lt;a href="help.html">Help!&lt;/a>
+
+A predefined curor ("help")&lt;br>
+&lt;a style="cursor:help" href="help.html">Help!&lt;/a>
+
+A custom curor using face.cur&lt;br>
+&lt;a style="cursor:url(face.cur),auto" href="help.html">Help!&lt;/a>
+
+&lt;style>
+ a.help {
+    cursor: help;
+    cursor: url(face.cur), help;  /* try this 2nd (for IE) */
+    cursor: url(face.jpeg) 4 12, help; /* try this 1st */
+ }
+&lt;/style>
+&lt;a class="help" href="help.html">Help!&lt;/a>
+</pre>
+
+
+</body>
+</html>
