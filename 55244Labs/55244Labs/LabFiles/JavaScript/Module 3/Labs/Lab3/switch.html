@@ -1,19 +1,36 @@
 <h2>switch</h2>
 
 Enter a state (OH, IN, NY, CA, FL):
-<input id="statecode" /><br>
+<input id="statecode" /><br />
 <button onclick="ShowRegion()">Lookup the region</button>
 
 <script>
-    function ShowRegion() {
-        let code = document.getElementById("statecode").value;
-        code = code.toUpperCase(); // just in case they enter lowercase!
+  function ShowRegion() {
+    let code = document.getElementById("statecode").value;
+    code = code.toUpperCase(); // just in case they enter lowercase!
 
-        let region = "unknown";
+    let region = "unknown";
 
-        // add your switch logic here...
-
-
-        alert("State " + code + " is in the " + region + " region.");
+    switch (code) {
+      case "OH":
+        region = "WHO DEY";
+        break;
+      case "IN":
+        region = "Sean Blessing";
+        break;
+      case "NY":
+        region = "Mi Abuela";
+        break;
+      case "CA":
+        region = "In the pacific ocean";
+        break;
+      case "FL":
+        region = "Francis";
+        break;
     }
+
+    // add your switch logic here...
+
+    alert("State " + code + " is in the " + region + " region.");
+  }
 </script>

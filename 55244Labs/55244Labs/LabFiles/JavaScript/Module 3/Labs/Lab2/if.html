@@ -1,19 +1,30 @@
 <h2>if</h2>
 
 Enter a state (OH, IN, NY, CA, FL):
-<input id="statecode" /><br>
+<input id="statecode" /><br />
 <button onclick="ShowRegion()">Lookup the region</button>
 
 <script>
-    function ShowRegion() {
-        let code = document.getElementById("statecode").value;
-        code = code.toUpperCase(); // just in case they enter lowercase!
+  function ShowRegion() {
+    let code = document.getElementById("statecode").value;
+    code = code.toUpperCase(); // just in case they enter lowercase!
 
-        let region = "unknown";
-
-        // add your if logic here...
-
-
-        alert("State " + code + " is in the " + region + " region.");
+    let region = "unknown";
+    if (code == "OH" || "IN") {
+      region = "Central";
     }
+    if (code == "NY") {
+      region = "NY Area";
+    }
+    if (code == "CA") {
+      region = "Westish";
+    }
+    if (code == "FL") {
+      region = "Between the gulf of 'Merica and the Atlantic Ocean";
+    }
+
+    // add your if logic here...
+
+    alert("State " + code + " is in the " + region + " region.");
+  }
 </script>

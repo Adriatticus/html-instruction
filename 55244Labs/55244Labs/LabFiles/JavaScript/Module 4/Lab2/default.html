@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Toy Web Pages Inc.</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link href="TWPIstyles.css" rel="stylesheet" />
-</head>
-<body>
-  <header>
-    Toy Web Pages Inc.  &#9786; 
-  </header>
+  </head>
 
-  <nav id="topNav">
-    <a href="default.html">Home</a> <a href="Toys.html">Toys</a> <a href="Sports.html">Sports</a> <a href="InfoRequest.html">More Information</a> 
-  </nav>
+  <body>
+    <header>Toy Web Pages Inc. &#9786;</header>
 
-  <section>
+    <nav id="topNav"><a href="default.html">Home</a> <a href="Toys.html">Toys</a> <a href="Sports.html">Sports</a> <a href="InfoRequest.html">More Information</a></nav>
 
-      <a href="Toys.html"  title="See more toys..."><img id="airplane1" style="float:right" src="airplane2.png"/></a>
+    <section>
+      <a href="Toys.html" title="See more toys..."><img id="airplane1" style="float: right" src="airplane2.png" /></a>
 
+      <h1>New Toys for Winter</h1>
 
-    <h1>New Toys for Winter</h1>
+      <article>
+        <h2>Building Blocks!</h2>
 
-    <article>
-      <h2>Building Blocks!</h2>
-        
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
-    </article>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
+      </article>
 
-    <article>
-      <h2 style="font-style:italic;">New Car Kits!</h2>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
-    </article>
+      <article>
+        <h2 style="font-style: italic">New Car Kits!</h2>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
+      </article>
+    </section>
+    <aside>
+      <h1>Small parts and child safety!</h1>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna
+    </aside>
 
-  </section>
-  <aside>
-    <h1>Small parts and child safety!</h1>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna 
-  </aside>
+    <footer>Copyright &copy; 2017 TWPinc. <a href="AboutUs.html">About</a> <a href="Contact.html">Contact Us</a> <a href="Privacy.html">Privacy</a></footer>
 
-  <footer>
-    Copyright &copy; 2017 TWPinc.   <a href="AboutUs.html">About</a>    <a href="Contact.html">Contact Us</a>    <a href="Privacy.html">Privacy</a>  
-  </footer>
-
-<!-- Script blocks for LAB 2 go here -->
-
-</body>
+    <!-- Script blocks for LAB 2 go here -->
+    var styletext = ` @keyframes flyaway { 0% { transition: 5s ease-in; } 100% { transform: translate(350px, 100px); } } #airplane1 { animation: flyaway 10s ease-in forwards; -moz-animation-iteration-count: 1; animation-iteration-count: 1; } ` var newStyleBlock = document.createElement("style"); newStyleBlock.textContent = styletext; document.head.appendChild(newStyleBlock); var airplane = document.getElementById("airplane1"); airplane.addEventListener("animationend", function() { airplane.style.display="none" }, false);
+  </body>
 </html>

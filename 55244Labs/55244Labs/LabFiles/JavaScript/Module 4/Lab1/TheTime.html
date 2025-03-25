@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>JavaScript Test</title>
-    </head>
-    <body>
-        <h2>The Time</h2>
+  <head>
+    <title>JavaScript Test</title>
+  </head>
+  <body>
+    <h2>The Time</h2>
 
-        The current time is <span id="currentTime"> <i>time goes here!</i> </span><br>
-
-        <script>
-
-        </script>
-
-    </body>
+    The current time is <span id="currentTime"> <i>time goes here!</i> </span><br />
+    <button onclick="getElementById('currentTime').textContent = (new Date()).toLocaleTimeString();">Update the time</button>
+    <script></script>
+  </body>
 </html>
