@@ -1,0 +1,70 @@
+<h2>Factorials using Recursion and Loops</h2>
+
+<b>Result of:</b> <span id="sample">&nbsp;</span><br>
+<b>is:</b> <span id="output">&nbsp;</span><br>
+
+<br><br>
+Enter a positive integer: <input type="number" min="0" id="howmany" value="10"/><br>
+<button onclick="doRecursion()">Factorial by recursion</button> <br>
+<button onclick="doLoop()">Factorial by loop</button> <br>
+
+<script>
+/* Notes:
+  The factorial of 0 is 1. (look it up!) 
+  Factorials are defined for positive numbers.
+  This example uses BigInt so you can create a factorial of any size.
+*/
+
+
+function factorialRecursion(num)
+{
+    if (num <= 0n ) {return 1n }
+    else {return num * factorialRecursion(num -1n);}  // function calls itself.
+}
+ 
+function doRecursion() 
+{
+    document.getElementById('output').innerHTML = '';
+    document.getElementById('sample').innerHTML = '';
+    let howmany = BigInt(document.getElementById("howmany").value);
+    ShowSample(howmany);
+    let output = document.getElementById("output");
+
+    let result = factorialRecursion(howmany);
+    output.innerText += result.toLocaleString("en-US");
+}
+
+// -----------------------------------------------------------
+
+function factorialLoop(num)
+{
+    let result = BigInt(num);
+    if (result < 1) { return 1; }
+    while (num>1n) { result = result * (num -1n); num--; } // plain ole loop
+    return result;
+}
+
+function doLoop() 
+{
+    document.getElementById('output').innerHTML = '';
+    document.getElementById('sample').innerHTML = '';
+    let howmany = BigInt(document.getElementById("howmany").value);
+    ShowSample(howmany);
+    let output = document.getElementById("output");
+
+    let result = factorialLoop(howmany);
+    output.innerText += result.toLocaleString("en-US");
+}
+
+function ShowSample(howmany)
+{
+    let spacer = "";
+    let str = "";
+    for (i=1; i<=howmany; i++)
+    {
+        str += spacer + i;
+        spacer = " * ";
+    }
+    document.getElementById("sample").innerText = str;
+}
+</script>

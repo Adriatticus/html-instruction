@@ -1,0 +1,46 @@
+
+<h2>Arrays</h2>
+
+Initial array:  ["Chevy","Ford","Jeep"]  <br><br>
+Current array: <span id="current"></span>  <br><br>
+
+New item: <input type="text" id="newitem" />
+
+<button onclick="AddNew()">Add new item</button>  <br><br>
+
+<button onclick="GetItem()">Get item by index</button> 
+<input type="number" id="getnum" /> 
+=> <span id="theitem"></span>
+<br><br>
+
+<button></button>
+
+<button onclick="DeleteItem()">Delete item by index</button>
+<input type="number" id="delnum" /> <br><br>
+
+<br>
+<script>
+    var theArray = ["Chevy","Ford","Jeep"];
+
+    function AddNew() {
+        var itemtext = document.getElementById("newitem").value;
+        theArray[theArray.length] = itemtext;
+        // or  theArray.push(itemtext);
+        document.getElementById("current").innerText = JSON.stringify(theArray);
+    }
+
+    function GetItem() {
+        var index = document.getElementById("getnum").value;
+        if (index < 0 | index > theArray.length-1) {alert("out of range"); return;}
+        document.getElementById("theitem").innerText = theArray[index];
+    }
+
+    function DeleteItem() {
+        var index = document.getElementById("delnum").value;
+        if (index < 0 | index > theArray.length-1) {alert("out of range"); return;}
+        theArray.splice(index,1);
+        // or if index = theArray.length   then   theArray.pop();
+        document.getElementById("current").innerText = JSON.stringify(theArray);
+    }
+
+</script>

@@ -1,0 +1,61 @@
+<h2>VarLetConst</h2>
+
+<div id="output">Results:<br><br></div>
+
+<script>
+  var outdata = document.getElementById("output");
+
+
+  var g1 = 100;   // this is global variable
+
+  function DoWork( aValue )   // aValue is local to the function
+  {
+      var multiplier = 3;     // multiplier is locacl to the function
+      return aValue * multiplier + g1;  // g1 is available in the function
+  }
+
+  var g2 = DoWork( 20 );
+  outdata.innerHTML += "g2 = " + g2 + "<br>";
+
+  //// uncomment these two lines and test with the F12 tools panel open
+  //var g3 = multiplier;  // error here! multiplier is out of scope
+  //var g4 = aValue; // error here! 
+
+  // LET vs VAR
+  if (g1 > 50)
+  {
+    var x = 5;  // these two variables are global
+    var y = 6;
+  }
+
+  outdata.innerHTML += "x = " + x + "<br>";  // no error here.
+
+
+  if (g1 > 50)
+  {
+    let z = 5;  // these two variables are local to the IF block
+    let w = 6;
+  }
+
+  //// uncomment this line and test with the F12 tools panel open
+  //outdata.innerHTML += "z = " + z + "<br>";  // error here! z is not global
+
+  // A test for "let" support
+  // try {
+  //   eval("let x = 5;")
+  //   alert("let is supported")
+  // } catch (error) {
+  //   alert("let is NOT supported")
+  // }
+
+
+
+// CONST
+
+const taxrate = .075;
+
+  //// uncomment this line and test with the F12 tools panel open
+  //taxrate = .085;
+
+
+</script>

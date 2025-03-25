@@ -1,0 +1,28 @@
+<style>
+    button { position: relative;}
+</style>
+
+<h2>setTimeout Loop Demo</h2>
+
+Press F12 and click the console tab. Refresh the browser and note the console.log messages.<br><br>
+
+<button id="dummyButton">Click me to win!</button>
+
+<script>
+    var theButton = document.getElementById("dummyButton");
+    var moves = 0;
+    function MoveButton() {
+        // move the button.
+        console.log("Moving the button: " + ++moves);
+        theButton.style.left = (theButton.offsetLeft + 100) + "px";
+
+        // and wait and do it again
+        setTimeout(MoveButton,1000);
+    }
+
+    console.log("Setting up first call to MoveButton.");
+    // do the first move:
+    setTimeout(MoveButton,1000);
+    console.log("Last line of the script has been processed.");
+
+</script>

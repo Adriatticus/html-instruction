@@ -1,0 +1,22 @@
+            <ul id="Products">
+                <li>
+                    <h3>Yellow Bird</h3>
+                    <img src="Toy1.jpg" />
+                </li>
+                <li>
+                    <h3>Old Bird</h3>
+                    <img src="Toy2.jpg" />
+                </li>
+                <li>
+                    <h3>Fast Bird</h3>
+                    <img src="Toy3.jpg" />
+                </li>
+                <li>
+                    <h3>Round Bird</h3>
+                    <img src="Toy4.jpg" />
+                </li>
+                <li>
+                    <h3>Future Product</h3>
+                    <img src="Toy5.jpg" />
+                </li>
+            </ul>

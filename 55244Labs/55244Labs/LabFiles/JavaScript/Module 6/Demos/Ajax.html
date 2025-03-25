@@ -1,0 +1,146 @@
+<h2>jQuery $ajax Demo</h2>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+crossorigin="anonymous"></script>
+
+URL: <input id="serviceurl" type="url" value="http://localhost:5000/odata/Products" style="width:100%" />
+<br>
+<button onclick="LoadData()">Load Data into a table</button>
+<br>
+<button onclick="GetData()">Call web service and show JSON</button>
+<br>
+
+
+A Table: 
+<div style="">
+    <table id="theTable">
+
+    </table>
+</div>
+<br>
+
+
+<button onclick="AddData()">Add new product</button> 
+<br>
+<input type="text" id="newItemData" value='{ "Color": "Burple","ProductName": "Super Hero Jet","Category": "Kids","Size": 15,"Retail": 578.27}'  style="width:100%" />  <br><br>
+Returned data:<br>
+
+<div id="output"></div>
+
+<script>
+function GetData() {
+    document.getElementById("output").innerHTML = "";
+    var serviceURL = document.getElementById("serviceurl").value;
+
+    $.ajax(
+        {
+            url: serviceURL, 
+            method: "GET", 
+            headers: {
+                "accept": "application/json",
+            },
+            success: function (data) {
+                //alert(JSON.stringify(data,null,4));
+                // display data in the page
+                document.getElementById("output").innerHTML = "<pre>"+JSON.stringify(data,null,2)+"</pre>"
+            },
+            error: function (err) {
+                alert(JSON.stringify(err));
+            }
+        }
+    );
+
+}
+
+// same as GetData except for loading the result to a table and nometadata option
+function LoadData() {
+    document.getElementById("output").innerHTML = "";
+    var serviceURL = document.getElementById("serviceurl").value;
+
+    var table = document.getElementById("theTable");
+    //table.rows.clear();
+    while(table.hasChildNodes())
+    {
+        table.removeChild(table.firstChild);
+    }
+
+    $.ajax(
+        {
+            url: serviceURL, 
+            method: "GET", 
+            headers: {
+                "accept": "application/json",
+            },
+            success: function (data) {
+                // alert(JSON.stringify(data,null,4));
+
+                var Products = data.value;
+
+                // add rows
+                for (var i=0; i<Products.length; i++)
+                {
+                    var row = table.insertRow();
+                    var col = 0;
+                    for (var item in Products[i])
+                    {
+                        var cell = row.insertCell();
+                        cell.innerText = Products[i][item]; // returns property value
+                    }
+                }
+
+                // add table header row                
+                var header = table.createTHead();
+                var row = header.insertRow();
+                for (var item in Products[0])
+                {
+                    var cell = row.insertCell();
+                    cell.innerText = item;  // returns property name
+                }
+
+            },
+            error: function (err) {
+                alert(JSON.stringify(err));
+            }
+        }
+    );
+}
+
+function AddData() {
+    document.getElementById("output").innerHTML = "";
+    var serviceURL = document.getElementById("serviceurl").value;
+    var dataToSend = document.getElementById("newItemData").value;
+
+    $.ajax(
+        {
+            url: serviceURL, 
+            contentType: "application/json",
+            type: "POST",
+            dataType: 'json',
+            data: dataToSend, 
+            //headers: { "Content-Length": 66 },
+            success: function (data) {
+                document.getElementById("output").innerHTML = "<pre>"+JSON.stringify(data,null,2)+"</pre>";
+            },
+            error: function (jqXHR, ex, msg) {
+                //alert("Error from server: \nStatus: " + jqXHR.status + "\nException: " + ex +
+                //"\nMessage: " + msg + "\nMessage from server: " + jqXHR.responseText);
+                document.getElementById("output").innerHTML = "Error from server: \nStatus: " + jqXHR.status + "\nException: " + ex +
+                "\nMessage: " + msg + "\nMessage from server: " + jqXHR.responseText;
+            }
+
+        }
+    );
+}
+
+</script>
+
+
+
+<style>
+    thead tr { font-weight: bold; }
+    div {
+          background-color: lightgrey;
+          height: 200px; width: 100%; overflow: scroll; border:1px solid black
+        }
+</style>

@@ -1,0 +1,38 @@
+<h2>Order of Evaluation (and a general calculator)</h2>
+
+
+Enter a formula<br><br>
+<input type="text" id="formula"/> = <span id="result">___</span>
+<br><br>
+<button onclick="DoCalc()">Calc</button>
+<script>
+
+function DoCalc() {
+    try {
+        var r = eval(document.getElementById("formula").value);
+        document.getElementById("result").innerText = r;
+        
+    } catch (error) {
+        document.getElementById("result").innerText = "error! " + error.value;
+      
+    }
+}
+
+</script>
+
+<br><hr><br>
+Examples:
+<br>
+<br>10 / 3
+<br>10 * 5 + 2
+<br>10 * ( 5 + 2 )
+<br>(10 * 5) + 2
+<br>5 / 0
+<br>"123" * 10
+<br>"123" + 10
+<br>10 + "123"
+<br>10 / "5"
+<br>"10" / 5
+<br>2 ** 8
+<br>Math.pow(2,8)
+<br>

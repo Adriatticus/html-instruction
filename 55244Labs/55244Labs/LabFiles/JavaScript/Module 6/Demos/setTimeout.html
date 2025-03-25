@@ -1,0 +1,30 @@
+
+<h2>setTimeout Demo</h2>
+
+Press F12 and click the console tab.<br>
+View the source to see the use of functions, anonymous functions and arrow functions.
+
+<script>
+    function myCallBack() {
+        console.log("Message from the setTimeout callback.");
+    }
+
+    console.log("First message from the script.");
+    setTimeout(myCallBack,2000);
+    console.log("Second message from the script.");
+
+</script>
+
+<script>
+    // // using an anonymous function
+    // console.log("First message from the script.");
+    // setTimeout(function () {console.log("Message from the setTimeout callback.");} ,2000);
+    // console.log("Second message from the script.");
+</script>
+
+<script>
+    // // using an arrow function
+    // console.log("First message from the script.");
+    // setTimeout( () => {console.log("Message from the setTimeout callback.");} ,2000);
+    // console.log("Second message from the script.");
+</script>

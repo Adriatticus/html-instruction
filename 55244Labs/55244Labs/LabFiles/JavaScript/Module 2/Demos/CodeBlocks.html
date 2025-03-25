@@ -1,0 +1,38 @@
+<h2>Code Blocks</h2>
+
+View the page source to see the code.<br><br>
+
+<div id="datadiv1"></div>
+
+<div id="datadiv2"></div>
+
+<script>
+
+// Write out 5 years of months:
+let datadiv = document.getElementById("datadiv1");
+let months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+let theYear = 2022;
+
+// formatted version
+for (let y=0; y<5; y++) {
+
+    datadiv.innerHTML = datadiv.innerHTML + "<h3>Year " + theYear + "</h3>"; 
+    theMonth = 0;
+
+    for (let m=0; m<12; m++) {
+        datadiv.innerHTML = datadiv.innerHTML + " " + months[theMonth] ; 
+        theMonth++;
+    }
+
+    theYear++;
+}
+
+datadiv.innerHTML = datadiv.innerHTML + "<hr>";
+// one line version
+for (let y=0; y<5; y++) {datadiv.innerHTML = datadiv.innerHTML + "<h3>Year " + theYear + "</h3>"; theMonth = 0;for (let m=0; m<12; m++) {datadiv.innerHTML = datadiv.innerHTML + " " + months[theMonth]; theMonth++;}theYear++;}
+
+
+
+</script>
+

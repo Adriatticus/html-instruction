@@ -1,0 +1,35 @@
+<h2>Ternary Expression</h2>
+
+<br>(Use View Source or the Developer Tools to see the code.)<br><br>
+
+Tax for Ohio is 7.25%. No tax for other states.<br><br>
+
+Enter a two letter state code:
+<input id="state" type="text" maxlength="2"/> Tax rate is: <span id="taxrate"></span>
+<br>
+<button onclick="GetRate()">Find tax rate</button>
+
+<script>
+    function GetRate() {
+        let state = document.getElementById("state").value.toUpperCase();
+
+        // tax for Ohio, zero for all others
+        let tax = (state == "OH") ? .075 : .00;
+
+        document.getElementById("taxrate").innerText = tax;
+    }
+
+    // "let tax = (state == "OH") ? .075 : .00;" same as this IF structure:
+    /*
+    let tax;
+    if (state == "OH")
+    {
+        tax = .075;
+    }
+    else
+    {
+        tax = 0;
+    }
+    */
+
+</script>

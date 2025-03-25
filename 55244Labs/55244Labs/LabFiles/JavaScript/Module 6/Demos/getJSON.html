@@ -1,0 +1,28 @@
+<h2>jQuery $getJSON Demo</h2>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+crossorigin="anonymous"></script>
+
+URL: <input id="serviceurl" type="url" value="http://localhost:5000/odata/Products" style="width:100%" />
+<button onclick="GetData()">Call web service</button>
+<br>
+
+
+Returned data:<br>
+<div id="output"></div>
+
+
+<script>
+function GetData() {
+    document.getElementById("output").innerHTML = "";
+    var serviceURL = document.getElementById("serviceurl").value;
+
+    // jQuery getJSON web service call
+    $.getJSON( serviceURL, function (data) {
+            document.getElementById("output").innerHTML = "<pre>"+JSON.stringify(data,null, 2)+"</pre>"
+            }
+    );
+}
+
+</script>

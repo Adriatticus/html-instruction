@@ -1,0 +1,55 @@
+<h2>Loops for arrays - for, for..in and for..of</h2>
+
+(view and edit the code)<br><br>
+
+Sample array: Cars, , Boats, Airplanes, Bikes &nbsp;&nbsp;&nbsp;<i>Notice the missing item!</i>
+<br>
+<button onclick="DoDemo()">Go</button><br><br>
+
+From the <b>for</b> statement:
+ <span id="foroutput"></span><br><br>
+
+ From the <b>for in</b> statement:
+ <span id="forinoutput"></span><br><br>
+
+ From the <b>for of</b> statement:
+ <span id="forofoutput"></span><br><br>
+
+<script>
+    function DoDemo() {
+        document.getElementById("foroutput").innerText = "";
+        document.getElementById("forinoutput").innerText = "";
+        document.getElementById("forofoutput").innerText = "";
+
+        let thearray = ["Cars", ,"Boats", "Airplanes", "Bikes"];
+        //thearray[6] = "Rockets";
+
+        // a traditional for loop
+        let startindex = 0;
+        let endindex = thearray.length;
+        for (let index = startindex; index < endindex; index++) {
+            value = thearray[index];  // lookup the item by its index
+            document.getElementById("foroutput").innerText += " " + value;
+        }
+
+        // a for..in loop (No counters needed! You do use indexes.)
+        for (let index in thearray) {
+            value = thearray[index]; // lookup the item by its index
+            document.getElementById("forinoutput").innerText += " " + value;
+        }
+        // for..in should not be used for arrays where the order is important.
+        // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in#why_use_for...in
+    
+        // a for..of loop
+        for (let item of thearray) {
+            value = item; // directly access the item
+            document.getElementById("forofoutput").innerText += " " + value;
+        }
+    
+    }
+
+    let someitems = ["apples", "oranges", "pears"];
+    for ( let idx in someitems) {
+        console.log( "This is item " + someitems[ idx ]); // idx is an index, not the item)
+    }
+</script>

@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>My web page</title>
+</head>
+<body>
+
+<h1>Welcome!</h1>
+
+Today is <span id="theday"></span>
+
+<script>
+  let thespan = document.getElementById("theday");
+  thespan.innerText = new Date().toLocaleString('en-US', {weekday:'long'});
+</script>
+
+</body>
+</html>
+

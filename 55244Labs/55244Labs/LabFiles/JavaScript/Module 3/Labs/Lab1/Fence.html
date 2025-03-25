@@ -1,0 +1,205 @@
+<h2>Picket Fence, on sale this week!</h2>
+
+<Button onclick="DrawFence()">Draw the Fence with 4" boards</Button>
+<Button onclick="DrawFenceRandom()">Draw the Fence with 4" and 6" boards</Button>
+<Button onclick="DrawFenceBoxOfBoards()">Draw the Fence from a box of 10 boards</Button>
+<br><br>Boards needed: <b><span id="boardcount"></span></b><br><br>
+
+<!-- Display area for the fence -->
+<div id="FenceBox">
+    <img class="HorizontalTop" src="BoardHorizontal.png" />
+    <img class="HorizontalBottom" src="BoardHorizontal.png" />
+</div>
+
+<script>
+    const board4in = 66;
+    const board6in = 100;
+    const gap = 16;
+
+    /*
+    Example 1: All boards are the same width. You need to fill the fence.
+    You should be able to calculate the number of boards needed.
+    I.e. You know before the loop how many you will need.
+      Use the 4" board (66px) with a 1" gap (16px).
+    */
+    function DrawFence() {
+        ClearDiv();
+
+        // get the width of the div for the fence
+        let fenceBox = document.getElementById("FenceBox");
+        let fenceWidth = fenceBox.offsetWidth;
+        // calculate how many boards are needed.
+        let boardPlusGap = board4in + gap;
+
+        let boards = Math.floor(fenceWidth / boardPlusGap);
+
+        for (let i = 0; i < boards; i++) {
+            let newLocation = i * boardPlusGap;
+
+            AddNewBoard(fenceBox, newLocation, "4");  // divToUpdate, offset, size
+        }
+
+        document.getElementById("boardcount").innerText = boards + " 4 inch boards.";
+    }
+
+    ////////////////////////////////////////////
+
+    /*
+    Example 2: all boards are randomly either 4" or 6" width. 
+        I.e. You cannot know before the loop how many you will need.
+    */
+    function DrawFenceRandom() {
+        ClearDiv();
+
+        // get the width of the div for the fence
+        let fenceBox = document.getElementById("FenceBox")
+        let fenceWidth = fenceBox.offsetWidth
+
+        let boards = 0;
+        let nextLocation = 0;
+        let roomForAnotherBoard = true;  // always room for 1 board!
+
+        while (roomForAnotherBoard) {
+
+            // where the next board will be drawn, if it will fit
+            let newLocation = nextLocation;
+
+            // calculate the next board space needed
+            let boardSize = (Math.random() > .5) ? "4" : "6";
+
+            if (boardSize == "4") { nextLocation = nextLocation + board4in + gap; }  // 4" board is 66px
+            else { nextLocation = nextLocation + board6in + gap; }  // 6" board is 100px
+
+            // will the next board fit in the div?
+            //if (nextLocation >= fenceWidth) { break; }
+
+            if (nextLocation < fenceWidth) {
+                // add the next board
+                AddNewBoard(fenceBox, newLocation, boardSize);  // offset, size
+                // counter for the screen update
+                boards++;
+            }
+            else {
+                roomForAnotherBoard = false;
+            }
+        }
+
+        document.getElementById("boardcount").innerText = boards + " mixed boards.";
+
+    }
+
+    ////////////////////////////////////////////
+
+    /*
+    Example 3: You have a sealed box of 1 to 10 boards. 
+        I.e. You know before the loop how many you will need.
+    You will be given an array (the box) with a mix of 4" and 6" boards.
+    */
+
+    function DrawFenceBoxOfBoards() {
+        ClearDiv();
+
+        // get the box of boards - you could have from 1 to 10 boards
+        let howManyBoards = 10;
+        let boxOfBoards = [];
+        for (let i = 0; i < howManyBoards; i++) {
+            let boardSize = (Math.random() > .5) ? "4" : "6";
+            boxOfBoards.push(boardSize);  // add to the box (array) of boards
+        } // we now have a box of 10 random width boards.
+
+        let fenceBox = document.getElementById("FenceBox")
+        let nextLocation = 0; // start at the left edge
+
+
+        // now draw the fence...
+
+        // add boards to the fence - The FOR IN solution. (The least code solution.)
+        for (board in boxOfBoards) {
+            AddNewBoard(fenceBox, nextLocation, boxOfBoards[board]);
+            if (boxOfBoards[board] == "4") { nextLocation = nextLocation + board4in + gap; }  // 4" board is 66px
+            else { nextLocation = nextLocation + board6in + gap; }  // 6" board is 100px
+        };
+
+        // // add boards to the fence - The FOR solution. (You create a counter (i).)
+        // for (let i = 0; i < boxOfBoards.length; i++) {
+        //     AddNewBoard(fenceBox, nextLocation, boxOfBoards[i]);
+        //     if (boxOfBoards[i] == "4") { nextLocation = nextLocation + board4in + gap; }  // 4" board is 66px
+        //     else { nextLocation = nextLocation + board6in + gap; }  // 6" board is 100px
+        // };
+
+        // // add boards to the fence - The WHILE solution (Yor create a counter (i).)
+        // let i = 0;
+        // while ( i < boxOfBoards.length ) {
+        //     AddNewBoard(fenceBox, nextLocation, boxOfBoards[i]);
+        //     if (boxOfBoards[i] == "4") { nextLocation = nextLocation + board4in + gap; }  // 4" board is 66px
+        //     else { nextLocation = nextLocation + board6in + gap; }  // 6" board is 100px
+        //     i++ // increment the counter
+        // }
+
+        document.getElementById("boardcount").innerText = howManyBoards + " in the box.";
+
+    }
+
+    ////////////////////////////////////////////
+
+    // Add a new board to the fence
+    function AddNewBoard(divToUpdate, offset, boardSize) {
+        let newBoard = document.createElement("img");
+
+        newBoard.src = "Board" + boardSize + "in.png"; // Board4in or Board6in
+        newBoard.style.position = "absolute";
+        newBoard.style.left = offset;
+        newBoard.style.padding = 0;
+        newBoard.top = 0;
+
+        divToUpdate.appendChild(newBoard);
+    }
+
+    ////////////////////////////////////////////
+    ////////////////////////////////////////////
+
+    // clear
+    function ClearDiv() {
+        // blank the count message
+        document.getElementById("boardcount").innerText = "";
+        // remove the fence boards
+        var div = document.getElementById('FenceBox');
+        while (div.firstChild) { div.removeChild(div.firstChild); }
+        // add horizontal boards
+        let newBoard1 = document.createElement("img");
+        newBoard1.src = "BoardHorizontal.png";
+        newBoard1.className = "HorizontalTop";
+        div.appendChild(newBoard1);
+        let newBoard2 = document.createElement("img");
+        newBoard2.src = "BoardHorizontal.png";
+        newBoard2.className = "HorizontalBottom";
+        div.appendChild(newBoard2);
+    }
+
+
+</script>
+
+<style>
+    .HorizontalTop {
+        position: relative;
+        top: 200px;
+        left: 0;
+        width: 100%;
+        height: 33px;
+    }
+
+    .HorizontalBottom {
+        position: relative;
+        top: 400px;
+        left: 0;
+        width: 100%;
+        height: 33px;
+    }
+
+    #FenceBox {
+        height: 550px;
+        border: 1px black solid;
+        position: relative;
+    }
+</style>
+

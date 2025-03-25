@@ -1,0 +1,33 @@
+<h2>Fetch demo</h2>
+
+<div id="messages"></div>
+<hr>
+<div id="data"></div>
+
+<script>
+    let msgdiv = document.getElementById("messages"); 
+    let datadiv = document.getElementById("data");
+
+    msgdiv.innerHTML += "Reqesting data. (" + performance.now () +"ms)<br>";
+
+    let url="http://localhost:5000/odata/Products";
+
+    fetch(url)
+      .then(function(response) {
+        if (!response.ok) {
+            throw new Error("HTTP status code " + response.status);
+        }
+        msgdiv.innerHTML += "Data received. (" + performance.now () +"ms)<br>";
+        return response.json();  // pass on to next "then"
+       })
+      .then(function (json) {
+          msgdiv.innerHTML += "Processing data.(" + performance.now () +"ms)<br>";
+          datadiv.innerText = JSON.stringify(json)} )
+      .catch(function (e) {
+          // catches network (bad url etc) errors only
+          msgdiv.innerHTML += "Error: " + e + "(" + performance.now () +"ms)<br>";
+      }); 
+
+    msgdiv.innerHTML += "Data requested. Waiting for response. <b>End of script.</b>(" + performance.now () +"ms)<br>";
+
+</script>

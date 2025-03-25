@@ -1,0 +1,49 @@
+<h2>Feature Detection</h2>
+
+Pick some code to test.
+<select id="selectlist" onchange="TestTheCode()">
+    <option></option>
+    <option>var abc = 5; result = abc;</option>
+    <option>let abc = 5; result = abc;</option>
+    <option>Let abc = 5; result = abc;</option>
+    <option>let abc = 5 / 0; result = abc; // returns "Infinity" so not an error.</option>
+    <option>let abc = 10 / 5; result = abc;</option>
+    <option>let abc = 10 / 5n; result = abc; /* 5n is a BigInt */</option>
+    <option>let abc = 10n / 5n; result = abc; /* 10n and 5n are BigInts */</option>
+    <option>let abc = navigator.userAgentData.platform; result = abc;</option>
+    <option>var synth = window.speechSynthesis; result = synth;</option>
+
+</select>
+
+<h3>Notes:</h3>
+<ul>
+    <li>"let" was added with ES6 (ECMAScript 2015). Not supported in IE 10. </li>
+    <li>Infinity is a JavaScript data type.</li>
+    <li>BigInt support was added starting with ES11 (ECMAScript 2020). Not supported by IE11.</li>
+    <li>All values used in a BigInt expression must be BigInt.</li>
+    <li>As of 1/2022 "navigator.userAgentData" exists in Chrome, Edge and Brave but not in Firefox.</li>
+    <li>Can your browser speak? See: <a href="https://mdn.github.io/web-speech-api/speak-easy-synthesis/">https://mdn.github.io/web-speech-api/speak-easy-synthesis/</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance">https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance</a></li>
+</ul>
+
+<div style="border: 1px black solid;">
+Your browser's user agent string: <span id="useragent"></span>
+</div>
+
+<script>
+    document.getElementById("useragent").innerText = navigator.userAgent;
+
+    function TestTheCode() {
+
+        var test = document.getElementById("selectlist").value;
+
+        var result = undefined;
+        try {
+            eval(test);
+            alert("It worked! The value of 'result' is " + result);
+        }
+        catch (err) {
+            alert("Error! Must not be supported in this browser " + 
+                  "\nor there is a syntax error.\n");
+        }
+    }
+</script>

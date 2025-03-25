@@ -1,0 +1,42 @@
+<h2>HTML5 XMLHttpRequest Demo</h2>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
+crossorigin="anonymous"></script>
+
+URL: <input id="serviceurl" type="url" value="http://localhost:5000/odata/Products" style="width:100%" />
+<button onclick="GetData()">Call web service</button>
+<br>
+
+
+Returned data:<br>
+<div id="output"></div>
+
+
+<script>
+function GetData() {
+    document.getElementById("output").innerHTML = "";
+    var serviceURL = document.getElementById("serviceurl").value;
+
+    // XMLHttpRequest web service call
+
+    let myHttpReq = new XMLHttpRequest();  // create the object
+
+    // what to do on the return
+    myHttpReq.onreadystatechange = function () {
+        if( myHttpReq.readyState = XMLHttpRequest.DONE ) {
+            let status = myHttpReq.status;
+            if (status === 0 || (status >= 200 && status < 400)) {
+                document.getElementById("output").innerHTML =                   
+                "<pre>"+JSON.stringify(myHttpReq.response,null, 2)+"</pre>";
+                // covert json object to string and pretty format  
+            }
+        }
+    }
+
+    myHttpReq.responseType = "json";  // request a json object
+    myHttpReq.open('GET', serviceURL); // initialize the request
+    myHttpReq.send(); // make the call
+}
+
+</script>

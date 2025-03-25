@@ -1,0 +1,48 @@
+<h2>window.onerror</h2>
+
+Run this page and note the three popups.<br><br>
+
+Edit this page and uncomment the alternate window.onerror code. 
+Run the page again and note the improved message.
+<br><br>
+(View Source or open in your code editor.)
+
+
+<script>
+try
+{
+    Beep();
+}
+catch
+{
+    alert("Error from first try/catch. (sorry no details!)")
+}
+
+try
+{
+    Beep();
+}
+catch (e)
+{
+    alert(`Error from second try/catch. (${e.message})`)
+    // or
+    // alert("Error from second try/catch. (" + e.message + ")")
+}
+
+window.onerror = function() { alert("No one handled this error!")}
+
+// window.onerror = function(message, source, line, col, error) {
+//     alert("Please call the helpdesk and report:\n" +
+//           "Message: " + message + "\n" +
+//           "Source: " + source + "\n" +
+//           "Line:	" + line + " Column: " + col + "\n" +
+//           "Error:	" + error)
+// }
+
+Beep();
+
+
+
+</script>
+
+

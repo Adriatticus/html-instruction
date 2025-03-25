@@ -1,0 +1,43 @@
+<h2>Buttons</h2>
+
+Inline JavaScript:<br>
+<button id="btn10" onclick="alert('You clicked btn10!')">Button 10</button><br> 
+<button id="btn11" onclick="alert('You clicked ' + this.id)">Button 11</button><br> 
+<br>
+Function call:<br>
+<button id="btn12" onclick="DoAnAlert(this)">Button 12</button><br> 
+<button id="btn13" onclick="DoAnAlert(this)">Button 13</button><br>
+
+<script>
+    function DoAnAlert(btn) { 
+        alert('You clicked ' + btn.id); 
+    } 
+</script>
+
+<br><br>
+
+Event handler from code:<br>
+<button id="btn14">Click Me! (Button 14)</button>  <!-- note that there is no onclick attribute defined here -->
+
+<script>
+    var btn1 = document.getElementById("btn14");
+    // add an event handler using inline code...
+    btn1.onclick = function() { alert("btn14 says: You clicked me!") }; 
+</script>
+
+<br><br>
+
+Use the addEventListener function to add two event handlers<br>
+<button id="btn20">Click Me! (Button 20)</button>  <!-- note that there is no onclick attribute defined here -->
+
+<script>
+    var btn2 = document.getElementById("btn20");
+    // add an event handler using addEventListener
+    btn2.addEventListener("click", function() { alert("btn20 says: You clicked me!") } ) // add a second event handler to the button...
+    btn2.addEventListener("click", function() { alert("btn20 says: Thank you!") } ); 
+</script>
+    
+    
+
+
+    

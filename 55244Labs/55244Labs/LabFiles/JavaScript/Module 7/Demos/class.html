@@ -1,0 +1,61 @@
+<h2>Classes</h2>
+
+<script>
+
+    // The prototype pattern
+
+    function Product(id, name, price) {
+        this.ProductId = id;
+        this.Name = name;
+        this.Price = price;
+        this.Discount = .05
+    }
+
+    Product.prototype.CalcDiscount = function () { return this.Price * this.Discount; }
+
+    // create the objects
+    var ap1 = new Product(1, "Boat", 123);
+
+    var ap2 = new Product();
+    ap2.ProductId = 2;
+    ap2.Name = "Car";
+    ap2.Price = 200;
+
+
+    // the class pattern
+
+    class cProduct {
+        constructor(id, name, price) {    // similar to constructor function
+            this.ProductId = id;
+            this.Name = name;
+            this.Price = price;
+            this.Discount = .05;
+        }
+        CalcDiscount = function () { return this.Price * this.Discount; }  // similar to x.prototype.CalcDiscount = 
+    }
+
+
+    // create the objects (no change here!)
+    var bp1 = new cProduct(1, "Boat", 123);
+
+    var bp2 = new cProduct();
+    bp2.ProductId = 2;
+    bp2.Name = "Car";
+    bp2.Price = 200;
+
+
+
+    // "inheritance" - similar to constructor function chaining
+    // for an example of Prototype chaining see Prototypes.html
+    class BOnSaleItem extends cProduct {
+        constructor(id, name, price, saleprice, saledate) {
+            super(id, name, price);  // calls constructor for cProduct
+        this.SalePrice = saleprice;
+        this.SaleDate = saledate;
+        }
+
+    }
+
+
+
+</script>

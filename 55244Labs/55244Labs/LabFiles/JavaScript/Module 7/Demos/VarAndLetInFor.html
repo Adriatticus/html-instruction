@@ -1,0 +1,13 @@
+<h2>var vs. let Scope Demo</h2>
+<script>
+
+for (var i=0; i<10; i++) {console.log(i)}; 
+console.log(i);  // no error, i was hoisted 
+
+for (let j=0; j<10; j++) {console.log(j)}; 
+console.log(j); // Uncaught ReferenceError: j is not defined (out of scope)
+
+
+</script>
+
+// if you open this file in a browser, press F12 to see the error message

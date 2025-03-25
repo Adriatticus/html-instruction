@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            td { border: 1px solid black; width:75px}
+        </style>
+    </head>
+    <body>
+
+        <h1>New colors for your new web site</h1>
+
+        <input id="numberofcolors" type="number" value="10" min="1"/>
+
+        <button onclick="loadColors()">Load some colors!</button>
+        <br><br>
+
+        <table id="table1"></table>
+
+        <script>
+            function loadColors()
+            {
+                // clear the table
+                document.getElementById("table1").innerHTML = "";
+
+                // get the number of colors
+                var numberOfColors = document.getElementById("numberofcolors").value;
+
+                var str = "";
+                var randomcolor = "";
+                for (var i = 1; i <= numberOfColors; i++) {
+                    // create a random number based color
+                    // toString(16) converts the number to a base 16 value (HEX)
+                    randomcolor = "#" + (Math.random()).toString(16).substr(-6);
+
+                    str += "<tr><td> Item " + i + "</td><td>" + randomcolor + "</td>";
+                    str += "<td style='background-color:" + randomcolor + "'>&nbsp;</td></tr>";
+                }
+                // write the string of HTML into the <table>
+                document.getElementById("table1").innerHTML=str;
+            }
+        </script>
+
+    </body>
+</html>

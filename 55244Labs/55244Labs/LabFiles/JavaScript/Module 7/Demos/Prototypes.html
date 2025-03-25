@@ -1,0 +1,67 @@
+<h2>Sample code for Module 7 Constructor Functions and Prototypes</h2>
+
+View the source.
+
+<script>
+    function BankAccount(num, type, closed, balance) {
+        this.AcctNum = num,
+        this.Type = type,
+        this.Closed = closed,
+        this.Balance = balance,
+        this.CalcInterest = function () {
+            return this.Balance * .01;
+        }
+    }
+
+    var ba1 = new BankAccount();
+    ba1.AcctNum = 101;
+    ba1.Balance = 1000;
+    ba1.Type = "Checking";
+    ba1.Closed = false;
+    console.log(ba1.CalcInterest());
+
+    var ba2 = new BankAccount(100, "Saving", false, 500);
+    console.log(ba2.CalcInterest());
+
+    ba2.Manager = "Susan";
+
+</script>
+
+
+<script>
+
+    function Product(id, name, price) {
+        this.ProductId = id;
+        this.Name = name;
+        this.Price = price;
+    }
+
+    Product.prototype.Discount = .05;
+    Product.prototype.CalcDiscount = function () { return this.Price * this.Discount; }
+
+    var p1 = new Product(1, "Boat", 123);
+
+    var p2 = new Product();
+    p2.ProductId = 2;
+    p2.Name = "Car";
+    p2.Price = 200;
+
+    /* ---------------------------------------------------------------------- */
+
+    function OnSaleItem(id, name, price, saleprice, saledate) {
+        Product.call(this, id, name, price)
+        this.SalePrice = saleprice;
+        this.SaleDate = saledate;
+    }
+
+    // optional - to bring in the Product.prototype.* properties added to Product
+    Object.setPrototypeOf(OnSaleItem.prototype, Product.prototype);
+
+    // var os1 = new OnSaleItem()
+    var os1 = new OnSaleItem(1, "Boat", 123, 100, new Date());
+
+    // list all of the os1 properties
+    for (prop in os1) { console.log(prop) }
+
+
+</script>

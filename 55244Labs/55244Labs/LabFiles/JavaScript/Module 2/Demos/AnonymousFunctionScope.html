@@ -1,0 +1,45 @@
+<h2>Anonymous Functions and Scope</h2>
+
+To see the global functions list, open the Developer Tools, 
+click the Console tab and type “debugger;” 
+press Enter and then find and open “Scopes”.
+
+<br>
+
+<ul>
+    <li>Listed functions ended up in the Global scope</li>
+    <ul>
+        <li>Functions DoWork1, DoWork2, DoWork3, DoWork4 and DoWork4b will be seen from all code in this page.</li>
+        <li>Function DoWork3b will be seen from all code in this page, but is not attached to the window object.</li>
+    </ul>
+    <li>Functions not listed there are only available in the scopes they were created in.</li>
+
+    <ul>
+        <li>Functions DoWork2b and DoWork2c will only be accessible from code in function DoWork2.</li>
+        <li>Function DoWork4c will only be accessible in function DoWork4.</li>
+    </ul>
+</ul>
+<script>
+    function DoWork1() {}            // IN global scope and attached to window
+  
+    function DoWork2() {             // IN global scope and attached to window
+      function DoWork2b() {}         // NOT in global scope - IN function scope
+      var DoWork2c = function() {}   // NOT in global scope - IN function scope
+    }
+  
+    var DoWork3 = function() {}        // IN global scope and attached to window
+  
+    let DoWork3b = function() {}       // IN script scope and NOT attached to window 
+  
+    if (true)
+    {
+      function DoWork4() {}          // IN global scope and attached to window
+      var DoWork4b = function() {}   // IN global scope and attached to window
+      let DoWork4c = function() {}   // NOT in global scope - IN function scope
+    }
+  </script>
+  <script>
+      DoWork3b();
+  </script>
+  
+  

@@ -1,0 +1,88 @@
+<h2>Extending JavaScript Objects</h2>
+
+<h3>toPascalCase</h3>
+<input id="pascalcase" value="this is a test string" />
+<button onclick="PascalCaseIt()">Pascal Case It!</button>
+<input id="pascalcaseresult" />
+<br><br>
+
+<input id="titlecase" value="this is a test string" />
+<button onclick="TitleCaseIt()">Title Case It!</button>
+<input id="titlecaseresult" />
+<br><br>
+
+<input id="anumber" value="100" />
+<button onclick="DoubleIt()">Double It!</button>
+<input id="doubleanumber" />
+<br><br>
+
+<input id="numberToRound" value="3.333333" />
+<button onclick="DoubleIt()">Round to Even Number</button>
+<input id="numberToRoundResult" />
+<br><br>
+
+<script>
+    // add toPascalCase to the String class
+    String.prototype.toPascalCase = function () {
+        var a = this.toLowerCase().split(' ');  // array of lowercase words
+        for (var i = 0; i < a.length; i++) {    // for each word
+            a[i] = a[i][0].toUpperCase() + a[i].substring(1); // convert 1st letter to uppercase
+        }
+        return a.join(""); // convert from array or words to a single string (no spaces)
+    }
+
+    // add toTitleCase to the String class
+    String.prototype.toTitleCase = function() {
+        var a = this.toLowerCase().split(' ');  // array of lowercase words
+        for (var i = 0; i<a.length; i++) {       // for each word 
+            a[i] = a[i][0].toUpperCase() + a[i].substring(1); // convert 1st letter to uppercase
+            if (i > 0) {    // first word is always uppercase
+                // check for "noise" words
+                if (["this","a","is","the","of"].indexOf(a[i].toLowerCase()) > -1 )
+                {
+                    a[i] = a[i].toLowerCase() ; // put noise word back to lowercase
+                }
+            }
+        }
+        return a.join(' '); // convert from array or words to a single string
+    }
+
+    // add DoubleIt to the Number class
+    Number.prototype.doubleIt = function() {return this * 2 }
+
+    // add TrippleIt to the Number class
+    Number.prototype.trippleIt = function() { return this * 3 };
+
+    // add roundToEven to the Number class
+    Number.prototype.roundToEven = function() {return Math.round( this/2 ) * 2 }
+
+    /* -------------------------------------------------------- */
+    /* Button event handlers */
+    
+    function PascalCaseIt() {
+        var inp1 = document.getElementById("pascalcase");
+        var inp2 = document.getElementById("pascalcaseresult");
+        inp2.value = inp1.value.toPascalCase();
+    }
+
+    function TitleCaseIt() {
+        var inp1 = document.getElementById("titlecase");
+        var inp2 = document.getElementById("titlecaseresult");
+        inp2.value = inp1.value.toTitleCase();
+    }
+
+    function DoubleIt() {
+        var inp1 = document.getElementById("anumber");
+        var inp2 = document.getElementById("doubleanumber");
+        var val = Number.parseFloat(inp1.value)
+        inp2.value = val.doubleIt();
+    }
+
+    function DoubleIt() {
+        var inp1 = document.getElementById("numberToRound");
+        var inp2 = document.getElementById("numberToRoundResult");
+        var val = Number.parseFloat(inp1.value)
+        inp2.value = val.roundToEven();
+    }
+
+</script>

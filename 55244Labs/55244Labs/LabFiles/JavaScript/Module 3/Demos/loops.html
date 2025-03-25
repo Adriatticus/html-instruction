@@ -1,0 +1,52 @@
+<h2>Loops that count</h2>
+
+(view and edit the code)<br><br>
+
+Start index: <input type="number" id="startindex" value="0" /><br>
+&nbsp;End index: <input type="number" id="endindex" value="10" /><br>
+<button onclick="DoDemo()">Go</button><br><br>
+
+From the <b>for</b> statement:
+ <span id="foroutput"></span><br><br>
+
+ From the <b>while</b> statement:
+ <span id="whileoutput"></span><br><br>
+
+ From the <b>do while</b> statement:
+ <span id="dowhileoutput"></span><br><br>
+
+<script>
+    function DoDemo() {
+        document.getElementById("foroutput").innerText = "";
+        document.getElementById("whileoutput").innerText = "";
+        document.getElementById("dowhileoutput").innerText = "";
+
+        let startindex = Number(document.getElementById("startindex").value);
+        let endindex = Number(document.getElementById("endindex").value);
+        // note: instead of the "0" to force a number, you could also use parseInt()
+
+        let sep = "";
+        for (let index = startindex; index < endindex; index++) {
+            document.getElementById("foroutput").innerText += sep + index;
+            sep = ", ";
+        }
+
+        index = startindex;
+        sep = "";
+        while (index < endindex) {
+            document.getElementById("whileoutput").innerText += sep + index;
+            sep = ", ";       
+
+            index = index + 1;
+        }
+
+        index = startindex;
+        sep = "";
+        do {
+            document.getElementById("dowhileoutput").innerText += sep + index;
+            sep = ", ";       
+
+            index = index + 1;        
+        } while (index < endindex);
+    }
+</script>

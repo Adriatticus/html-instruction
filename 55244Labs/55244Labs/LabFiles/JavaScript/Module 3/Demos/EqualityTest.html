@@ -1,0 +1,29 @@
+<h2>Equality Test</h2>
+
+(view the code)
+
+<script>
+
+    let val1 = 123;
+    let val2 = "123";
+
+    let strval = "\n" + val1 + " and " + val2 + "";
+    if (val1 == val2) {
+        alert("val1 and val2 are equal in value " + strval);
+    }
+    else
+    {
+        alert("val1 and val2 are NOT equal in value " + strval);
+    }
+
+
+    let strtype = "\n" + typeof val1 + " and " + typeof val2 + "";
+    if (val1 === val2) {
+        alert("val1 and val2 are equal in value AND type " + strtype);
+    }
+    else
+    {
+        alert("val1 and val2 are NOT equal in value AND type " + strtype);
+    }
+
+</script>

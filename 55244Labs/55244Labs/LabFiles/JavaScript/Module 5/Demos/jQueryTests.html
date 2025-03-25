@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HTML TABLE</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        .Fish th {background-color: lightblue;}
+        .Fish td {background-color: lightcyan;}
+        .Products td {background-color: azure;}
+        li h3 {color:red; background-color: blanchedalmond;}
+        h2 {color:blue}
+        h3 {color: green}
+        .divtable .column {
+            width: 300px;
+            float: left;
+        }
+
+        .divtable .column.first {
+            clear: left;
+        }    </style>
+</head>
+<body>
+<h1>jQuery Demo Page</h1>
+
+<h2 id="featured">Featured Products</h2>
+<ul id="Products">
+    <li>
+        <h3>Yellow Bird</h3>
+    </li>
+    <li>
+        <h3>Old Bird</h3>
+    </li>
+    <li>
+        <h3>Fast Bird</h3>
+    </li>
+    <li>
+        <h3>Round Bird</h3>
+    </li>
+    <li>
+        <h3>Future Product</h3>
+    </li>
+</ul>
+
+<h3>Fish</h3>
+<table class="Fish">
+    <tr>
+        <th>Common name</th>
+        <th>Scientific name</th>
+    </tr>
+    <tr>
+        <td>Anglefish</td>
+        <td>Pterophyllum scalare</td>
+    </tr>
+    <tr>
+        <td>Neon Tetra</td>
+        <td>Paracheirodon innesi</td>
+    </tr>
+</table>
+
+<h3>Corydoras Catfish</h3>
+<table class="Fish">
+    <tr>
+        <th>Common name</th>
+        <th>Scientific name</th>
+    </tr>
+    <tr>
+        <td>Acre Corydoras</td>
+        <td>Corydoras Acrensis</td>
+    </tr>
+    <tr>
+        <td>Blacktop Corydoras</td>
+        <td>Corydoras Acutus</td>
+    </tr>
+    <tr>
+        <td>Bronze Corydoras</td>
+        <td>Corydoras Aeneus</td>
+    </tr>
+    <tr>
+        <td>Spotted Corydoras</td>
+        <td>Corydoras Ambiacus</td>
+    </tr>
+    <tr>
+        <td>Skunk Corydoras</td>
+        <td>Corydoras Arcuatus</td>
+    </tr>
+    <tr>
+        <td>Spotback Corydoras</td>
+        <td>Corydoras Blochi</td>
+    </tr>
+    <tr>
+        <td>False Blochi Catfish</td>
+        <td>Corydoras Delphax</td>
+    </tr>
+</table>
+
+
+<h2>Products</h2>
+<table class="Products">
+    <tr><th>ProductId</th><th>ProductName</th><th>Color</th><th>Category</th><th>Size</th><th>Retail</th></tr>
+    <tr><td>977</td><td>Extra 340 3D</td><td>Black</td><td>R/C Plane</td><td>58</td><td>539.99</td></tr>
+    <tr><td>989</td><td>Silver Arrow Sailboat</td><td>Black</td><td>R/C Boat</td><td>40</td><td>539.99</td></tr>
+    <tr><td>990</td><td>Silver Arrow Sailboat</td><td>Black</td><td>R/C Boat</td><td>42</td><td>539.99</td></tr>
+    <tr><td>991</td><td>Silver Arrow Sailboat</td><td>Black</td><td>R/C Boat</td><td>44</td><td>539.99</td></tr>
+    <tr><td>992</td><td>Silver Arrow Sailboat</td><td>Black</td><td>R/C Boat</td><td>48</td><td>539.99</td></tr>
+    <tr><td>993</td><td>Silver Arrow Sailboat</td><td>Black</td><td>R/C Boat</td><td>52</td><td>539.99</td></tr>
+    <tr><td>997</td><td>Extra 512 3D</td><td>Black</td><td>R/C Plane</td><td>44</td><td>539.99</td></tr>
+    <tr><td>998</td><td>Extra 512 3D</td><td>Black</td><td>R/C Plane</td><td>48</td><td>539.99</td></tr>
+    <tr><td>999</td><td>Extra 512 3D</td><td>Black</td><td>R/C Plane</td><td>52</td><td>539.99</td></tr>
+    <tr><td>984</td><td>Silver Arrow Sailboat</td><td>Silver</td><td>R/C Boat</td><td>40</td><td>564.99</td></tr>
+    <tr><td>985</td><td>Silver Arrow Sailboat</td><td>Silver</td><td>R/C Boat</td><td>42</td><td>564.99</td></tr>
+    <tr><td>986</td><td>Silver Arrow Sailboat</td><td>Silver</td><td>R/C Boat</td><td>44</td><td>564.99</td></tr>
+    <tr><td>987</td><td>Silver Arrow Sailboat</td><td>Silver</td><td>R/C Boat</td><td>48</td><td>564.99</td></tr>
+    <tr><td>988</td><td>Silver Arrow Sailboat</td><td>Silver</td><td>R/C Boat</td><td>52</td><td>564.99</td></tr>
+    <tr><td>958</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>54</td><td>742.35</td></tr>
+    <tr><td>959</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>58</td><td>742.35</td></tr>
+    <tr><td>960</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>62</td><td>742.35</td></tr>
+    <tr><td>961</td><td>3D Competition Helicopter</td><td>Yellow</td><td>Helicopter</td><td>44</td><td>742.35</td></tr>
+    <tr><td>962</td><td>3D Competition Helicopter</td><td>Yellow</td><td>Helicopter</td><td>50</td><td>742.35</td></tr>
+    <tr><td>963</td><td>3D Competition Helicopter</td><td>Yellow</td><td>Helicopter</td><td>54</td><td>742.35</td></tr>
+    <tr><td>964</td><td>3D Competition Helicopter</td><td>Yellow</td><td>Helicopter</td><td>58</td><td>742.35</td></tr>
+    <tr><td>965</td><td>3D Competition Helicopter</td><td>Yellow</td><td>Helicopter</td><td>62</td><td>742.35</td></tr>
+    <tr><td>978</td><td>3D Sport Helicopter</td><td>Blue</td><td>Helicopter</td><td>44</td><td>742.35</td></tr>
+    <tr><td>979</td><td>3D Sport Helicopter</td><td>Blue</td><td>Helicopter</td><td>50</td><td>742.35</td></tr>
+    <tr><td>980</td><td>Silver Arrow Sailboat</td><td>Silver</td><td>R/C Boat</td><td>38</td><td>769.49</td></tr>
+    <tr><td>981</td><td>Silver Arrow Sailboat</td><td>Silver</td><td>R/C Boat</td><td>40</td><td>769.49</td></tr>
+    <tr><td>982</td><td>Silver Arrow Sailboat</td><td>Silver</td><td>R/C Boat</td><td>42</td><td>769.49</td></tr>
+    <tr><td>983</td><td>Silver Arrow Sailboat</td><td>Silver</td><td>R/C Boat</td><td>46</td><td>769.49</td></tr>
+    <tr><td>759</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>58</td><td>782.99</td></tr>
+    <tr><td>760</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>60</td><td>782.99</td></tr>
+    <tr><td>761</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>62</td><td>782.99</td></tr>
+    <tr><td>762</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>44</td><td>782.99</td></tr>
+    <tr><td>763</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>48</td><td>782.99</td></tr>
+    <tr><td>764</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>52</td><td>782.99</td></tr>
+    <tr><td>765</td><td>Extra 340 3D</td><td>Black</td><td>R/C Plane</td><td>58</td><td>782.99</td></tr>
+    <tr><td>766</td><td>Extra 340 3D</td><td>Black</td><td>R/C Plane</td><td>60</td><td>782.99</td></tr>
+    <tr><td>767</td><td>Extra 340 3D</td><td>Black</td><td>R/C Plane</td><td>62</td><td>782.99</td></tr>
+    <tr><td>768</td><td>Extra 340 3D</td><td>Black</td><td>R/C Plane</td><td>44</td><td>782.99</td></tr>
+    <tr><td>769</td><td>Extra 340 3D</td><td>Black</td><td>R/C Plane</td><td>48</td><td>782.99</td></tr>
+    <tr><td>770</td><td>Extra 340 3D</td><td>Black</td><td>R/C Plane</td><td>52</td><td>782.99</td></tr>
+    <tr><td>785</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>38</td><td>1079.99</td></tr>
+    <tr><td>786</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>40</td><td>1079.99</td></tr>
+    <tr><td>787</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>44</td><td>1079.99</td></tr>
+    <tr><td>788</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>48</td><td>1079.99</td></tr>
+    <tr><td>797</td><td>Extra 480 3D</td><td>Yellow</td><td>R/C Plane</td><td>38</td><td>1120.49</td></tr>
+    <tr><td>798</td><td>Extra 480 3D</td><td>Yellow</td><td>R/C Plane</td><td>40</td><td>1120.49</td></tr>
+    <tr><td>799</td><td>Extra 480 3D</td><td>Yellow</td><td>R/C Plane</td><td>42</td><td>1120.49</td></tr>
+    <tr><td>800</td><td>Extra 480 3D</td><td>Yellow</td><td>R/C Plane</td><td>44</td><td>1120.49</td></tr>
+    <tr><td>801</td><td>Extra 480 3D</td><td>Yellow</td><td>R/C Plane</td><td>48</td><td>1120.49</td></tr>
+    <tr><td>953</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>60</td><td>1214.85</td></tr>
+    <tr><td>970</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>46</td><td>1214.85</td></tr>
+    <tr><td>971</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>50</td><td>1214.85</td></tr>
+    <tr><td>972</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>54</td><td>1214.85</td></tr>
+    <tr><td>754</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>58</td><td>1457.99</td></tr>
+    <tr><td>755</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>60</td><td>1457.99</td></tr>
+    <tr><td>756</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>44</td><td>1457.99</td></tr>
+    <tr><td>757</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>48</td><td>1457.99</td></tr>
+    <tr><td>758</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>52</td><td>1457.99</td></tr>
+    <tr><td>973</td><td>Extra 340 3D</td><td>Yellow</td><td>R/C Plane</td><td>40</td><td>1700.99</td></tr>
+    <tr><td>974</td><td>Extra 340 3D</td><td>Yellow</td><td>R/C Plane</td><td>42</td><td>1700.99</td></tr>
+    <tr><td>975</td><td>Extra 340 3D</td><td>Yellow</td><td>R/C Plane</td><td>44</td><td>1700.99</td></tr>
+    <tr><td>976</td><td>Extra 340 3D</td><td>Yellow</td><td>R/C Plane</td><td>48</td><td>1700.99</td></tr>
+    <tr><td>782</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>38</td><td>2294.99</td></tr>
+    <tr><td>783</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>42</td><td>2294.99</td></tr>
+    <tr><td>784</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>46</td><td>2294.99</td></tr>
+    <tr><td>779</td><td>Cloud Flyer Sailboat</td><td>Silver</td><td>R/C Boat</td><td>38</td><td>2319.99</td></tr>
+    <tr><td>780</td><td>Cloud Flyer Sailboat</td><td>Silver</td><td>R/C Boat</td><td>42</td><td>2319.99</td></tr>
+    <tr><td>781</td><td>Cloud Flyer Sailboat</td><td>Silver</td><td>R/C Boat</td><td>46</td><td>2319.99</td></tr>
+    <tr><td>954</td><td>3D Competition Helicopter</td><td>Yellow</td><td>Helicopter</td><td>46</td><td>2384.07</td></tr>
+    <tr><td>955</td><td>3D Competition Helicopter</td><td>Yellow</td><td>Helicopter</td><td>50</td><td>2384.07</td></tr>
+    <tr><td>956</td><td>3D Competition Helicopter</td><td>Yellow</td><td>Helicopter</td><td>54</td><td>2384.07</td></tr>
+    <tr><td>957</td><td>3D Competition Helicopter</td><td>Yellow</td><td>Helicopter</td><td>60</td><td>2384.07</td></tr>
+    <tr><td>966</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>46</td><td>2384.07</td></tr>
+    <tr><td>967</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>50</td><td>2384.07</td></tr>
+    <tr><td>968</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>54</td><td>2384.07</td></tr>
+    <tr><td>969</td><td>3D Competition Helicopter</td><td>Blue</td><td>Helicopter</td><td>60</td><td>2384.07</td></tr>
+    <tr><td>789</td><td>Extra 480 3D</td><td>Red</td><td>R/C Plane</td><td>44</td><td>2443.35</td></tr>
+    <tr><td>790</td><td>Extra 480 3D</td><td>Red</td><td>R/C Plane</td><td>48</td><td>2443.35</td></tr>
+    <tr><td>791</td><td>Extra 480 3D</td><td>Red</td><td>R/C Plane</td><td>52</td><td>2443.35</td></tr>
+    <tr><td>792</td><td>Extra 480 3D</td><td>Red</td><td>R/C Plane</td><td>58</td><td>2443.35</td></tr>
+    <tr><td>793</td><td>Extra 480 3D</td><td>Black</td><td>R/C Plane</td><td>44</td><td>2443.35</td></tr>
+    <tr><td>794</td><td>Extra 480 3D</td><td>Black</td><td>R/C Plane</td><td>48</td><td>2443.35</td></tr>
+    <tr><td>795</td><td>Extra 480 3D</td><td>Black</td><td>R/C Plane</td><td>52</td><td>2443.35</td></tr>
+    <tr><td>796</td><td>Extra 480 3D</td><td>Black</td><td>R/C Plane</td><td>58</td><td>2443.35</td></tr>
+    <tr><td>775</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>38</td><td>3374.99</td></tr>
+    <tr><td>776</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>42</td><td>3374.99</td></tr>
+    <tr><td>777</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>44</td><td>3374.99</td></tr>
+    <tr><td>778</td><td>Cloud Flyer Sailboat</td><td>Black</td><td>R/C Boat</td><td>48</td><td>3374.99</td></tr>
+    <tr><td>771</td><td>Cloud Flyer Sailboat</td><td>Silver</td><td>R/C Boat</td><td>38</td><td>3399.99</td></tr>
+    <tr><td>772</td><td>Cloud Flyer Sailboat</td><td>Silver</td><td>R/C Boat</td><td>42</td><td>3399.99</td></tr>
+    <tr><td>773</td><td>Cloud Flyer Sailboat</td><td>Silver</td><td>R/C Boat</td><td>44</td><td>3399.99</td></tr>
+    <tr><td>774</td><td>Cloud Flyer Sailboat</td><td>Silver</td><td>R/C Boat</td><td>48</td><td>3399.99</td></tr>
+    <tr><td>749</td><td>Extra, 340 3D</td><td>Red</td><td>R/C Plane</td><td>62</td><td>3578.27</td></tr>
+    <tr><td>750</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>44</td><td>3578.27</td></tr>
+    <tr><td>751</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>48</td><td>3578.27</td></tr>
+    <tr><td>752</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>52</td><td>3578.27</td></tr>
+    <tr><td>753</td><td>Extra 340 3D</td><td>Red</td><td>R/C Plane</td><td>56</td><td>3578.27</td></tr>
+</table>
+    
+    <h3>Cats</h3>
+    <div style="width: 620px;">
+        <div class="divtable">
+            <div class="column first"><b>Breed</b></div>
+            <div class="column"><b>Location of origin</b></div>
+            <div class="column first">Abyssinian </div>
+            <div class="column">Unspecified, but somewhere in Afro-Asia, likely Ethiopia</div>
+            <div class="column first">Aegean </div>
+            <div class="column">Greece</div>
+            <div class="column first">American Bobtail </div>
+            <div class="column">United States</div>
+            <div class="column first">American Curl </div>
+            <div class="column">United States</div>
+            <div class="column first">American Ringtail </div>
+            <div class="column">United States</div>
+            <div class="column first">American Shorthair </div>
+            <div class="column">United States</div>
+            <div class="column first">American Wirehair </div>
+            <div class="column">United States</div>
+            <div class="column first">Aphrodite Giant </div>
+            <div class="column">Cyprus</div>
+            <div class="column first">Arabian Mau </div>
+            <div class="column">the Arabian Peninsula</div>
+            <div class="column first">Asian </div>
+            <div class="column">Developed in United Kingdom;</div>
+        </div>
+    </div>
+
+</body>
+</html>

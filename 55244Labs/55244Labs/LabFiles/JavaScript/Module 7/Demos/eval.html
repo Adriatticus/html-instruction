@@ -1,0 +1,54 @@
+<h2>eval Demo</h2>
+
+Press F12 and display the Console tab.<br><br>
+
+<button onclick="doEval()">Use eval</button><br>
+<button onclick="doWithOutEval()">Without eval</button><br>
+<button onclick="doWithCallback()">Using callbacks</button><br>
+
+
+<script>
+function doEval() {
+    var msgtext = "Loose nut on keyboard!"; 
+    var destination; 
+    var d = new Date();
+    if (d.getHours() > 9 && d.getHours() < 17) {
+        destination = "alert";
+    }
+    else {
+        destination = "console.log";
+    }
+    eval(destination + "('" + msgtext + "')");
+}
+
+// no need for eval(), but the functions are hardcoded
+function doWithOutEval() {
+    var msgtext = "Loose nut on keyboard!"; 
+    var destination; 
+    var d = new Date();
+    if (d.getHours() > 9 && d.getHours() < 17) {
+        alert(msgtext);
+    }
+    else {
+        console.log(msgtext);
+    }
+}
+
+// no need for eval() and you could easily support other display functions
+function doWithCallback() {
+    var msgtext = "Loose nut on keyboard!"; 
+    var destination; 
+    var d = new Date();
+    if (d.getHours() > 9 && d.getHours() < 17) {
+        doCallBackMsg(alert, msgtext);
+    }
+    else {
+        doCallBackMsg(console.log, msgtext);
+    }
+}
+
+function doCallBackMsg(func, msg)
+{
+    func(msg);
+}
+</script>

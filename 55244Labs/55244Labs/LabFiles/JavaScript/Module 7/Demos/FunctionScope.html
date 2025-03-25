@@ -1,0 +1,36 @@
+<h2>Function Scope</h2>
+
+(view and edit the code)
+
+<script>
+
+// Comment out alerts as you test until this runs without error
+
+var topvar = 5;
+
+function a()
+{
+  alert("Top var = " + topvar);
+  alert("inner var = " + innervar);  // error here! "innervar" is not in scope
+
+  function b()
+  {
+    alert("Top var = " + topvar);
+    var innervar = 6;
+    alert("inner var = " + innervar);
+
+    anothervar = 100;
+    alert("another var = " + anothervar);
+
+  }
+
+  alert(topvar);
+  alert(innervar);  // error here! "innervar" is not in scope
+  alert("another var = " + anothervar);  // no error - it was hoisted to Global
+
+}
+
+// call the function
+a();
+
+</script>

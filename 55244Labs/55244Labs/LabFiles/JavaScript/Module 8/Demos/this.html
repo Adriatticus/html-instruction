@@ -1,0 +1,64 @@
+<h2>this</h2>
+
+Press F12 to open the browser's developer tools... <br><br>
+
+<hr>
+
+Buttons with onclick event handlers: (results in the Console)<br>
+
+<button id="btn1" 
+  onclick="console.log('\'this\' from a button click attribute with inline code:  \'this\' = ' + this )"
+>Button 1 (onclick=code)</button><br>
+
+<button id="btn2">Button 2 (onclick added by JavaScript)</button><br>
+
+<button id="btn3" onclick="DoButtonClick()">Button 3 (onclick=DoButtonClick())</button><br>
+
+<button id="btn4" onclick="DoButtonClickWithThis(this)">Button 4 (onclick=DoButtonClickWithThis(this))</button><br>
+
+
+<script>
+    //
+    console.log("'this' from the global level: 'this' = " + this );  // [object Window]
+
+    //
+    function DoWork1()
+    {
+        console.log("'this' from a Global function: 'this' = " + this );  // [object Window]
+    }
+    DoWork1()
+
+    //
+    function DoButtonClick()
+    {
+        console.log("'this' from a function called from an event: 'this' = " + this + " --- did you expect this?");
+    }
+
+    //
+    function DoButtonClickWithThis(thisvar)
+    {
+        console.log("'this' from a function called from an event that passes 'this':  'this' = " + thisvar );
+    }
+
+    //
+    document.getElementById("btn2").onclick = function() {
+        console.log('\'this\' from a function assigned to a button click attribute:  \'this\' = ' + this )
+    }
+
+</script>
+
+<hr>
+
+Button color changes on mouseover and mouseout using a single function. (view source) <br>
+
+<button onmouseover="ChangeColor(this,'red')" onmouseout="ChangeColor(this,'black')">Button 1</button>
+<button onmouseover="ChangeColor(this,'red')" onmouseout="ChangeColor(this,'black')">Button 2</button>
+<button onmouseover="ChangeColor(this,'red')" onmouseout="ChangeColor(this,'black')">Button 3</button>
+
+<script>
+    // change the button text color
+    function ChangeColor(btn,color)
+    {
+        btn.style.color = color;
+    }
+</script>

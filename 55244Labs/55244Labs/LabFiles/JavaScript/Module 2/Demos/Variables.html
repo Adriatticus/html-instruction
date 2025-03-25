@@ -1,0 +1,60 @@
+<h2>Variable Test Page</h2>
+
+<div id="output"></div>
+
+<script>
+    var output = document.getElementById("output");
+    function AddToOutput(v) {
+        output.innerHTML += "<br>The type of <b>" + v 
+                          + "</b> is: <b>" + typeof eval(v)
+                          + "</b>  The value is <b>" + eval(v) +"</b>";
+    }
+    
+    // undefined
+    AddToOutput("x");    
+
+    // undefined
+    var x;
+    AddToOutput("x");
+
+    // number
+    var n = 5;
+    AddToOutput("n");
+
+    var i = 5 / 0;
+    AddToOutput("i");
+
+    // number
+    var m = 3.33333;
+    AddToOutput("m");
+
+    var s = "Hello world!";
+    AddToOutput("s");
+    
+    var d = Date.now();
+    AddToOutput("d");
+
+    var b = true;
+    AddToOutput("b");
+
+    var NumberTimesString = 5 * "abc";
+    AddToOutput("NumberTimesString");
+
+    var bankaccount = { name:"Smith", balance:100, id:"123"};
+    AddToOutput("bankaccount");
+
+    var aDiv = document.getElementById("output");
+    AddToOutput("aDiv");
+
+    var cars = ["Chevy","Ford","Jeep"];
+    AddToOutput("cars");
+    //Note: The returns a type of object.
+    //      You can check if this variable is an array using: 
+    //            Array.isArray(cars);
+
+    function DoWork() { var a = 5; }
+    AddToOutput("DoWork");
+    // Note: You can also create this function this way:
+    //       var DoWork = function() { var a = 5; }
+
+</script>

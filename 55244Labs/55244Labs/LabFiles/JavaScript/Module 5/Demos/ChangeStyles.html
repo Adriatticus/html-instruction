@@ -1,0 +1,173 @@
+<html>
+
+<head>
+    <style>
+        body,td,th { font-size: 10px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Not all tables are &lt;table&gt;</h1>
+    <button onclick="AddBorderToTables()">Add borders to tables</button><br>
+    <button onclick="AddBorderToDivs()">Add borders to divs</button>
+
+    <script>
+
+        // Teams and fish are <table>
+        function AddBorderToTables() {
+
+            var tables = document.getElementsByTagName("TABLE");
+            for (i=0; i<tables.length; i++)
+            {
+                tables[i].style.border="solid red 2px";
+            }
+            // Comment the five lines above.
+            // Add your one line of jQuery code here!
+            
+        }
+
+        // Cats are <div>
+        function AddBorderToDivs() {
+            var tables = document.getElementsByTagName("DIV");
+            for (i=0; i<tables.length; i++)
+            {
+                tables[i].style.border="solid blue 2px";
+            }
+
+            // Comment the five lines above.
+            // Add your one line of jQuery code here!
+
+        }
+
+    </script>
+
+    <h3>Teams</h3>
+    <table>
+        <tr>
+            <th>Team name</th>
+            <th>City, State</th>
+        </tr>
+        <tr>
+            <td>Arizona Cardinals</td>
+            <td>Glendale, Arizona</td>
+        </tr>
+        <tr>
+            <td>Atlanta Falcons</td>
+            <td>Atlanta, Georgia</td>
+        </tr>
+        <tr>
+            <td>Baltimore Ravens</td>
+            <td>Baltimore, Maryland</td>
+        </tr>
+        <tr>
+            <td>Buffalo Bills</td>
+            <td>Orchard Park, New York</td>
+        </tr>
+        <tr>
+            <td>Carolina Panthers</td>
+            <td>Charlotte, North Carolina</td>
+        </tr>
+        <tr>
+            <td>Chicago Bears</td>
+            <td>Chicago, Illinois</td>
+        </tr>
+        <tr>
+            <td>Cincinnati Bengals</td>
+            <td>Cincinnati, Ohio</td>
+        </tr>
+    </table>
+
+    <h3>Fish</h3>
+    <table>
+        <tr>
+            <th>Common name</th>
+            <th>Scientific name</th>
+        </tr>
+        <tr>
+            <td>Anglefish</td>
+            <td>Pterophyllum scalare</td>
+        </tr>
+        <tr>
+            <td>Neon Tetra</td>
+            <td>Paracheirodon innesi</td>
+        </tr>
+    </table>
+
+    <h3>Corydoras Catfish</h3>
+    <table>
+        <tr>
+            <th>Common name</th>
+            <th>Scientific name</th>
+        </tr>
+        <tr>
+            <td>Acre Corydoras</td>
+            <td>Corydoras Acrensis</td>
+        </tr>
+        <tr>
+            <td>Blacktop Corydoras</td>
+            <td>Corydoras Acutus</td>
+        </tr>
+        <tr>
+            <td>Bronze Corydoras</td>
+            <td>Corydoras Aeneus</td>
+        </tr>
+        <tr>
+            <td>Spotted Corydoras</td>
+            <td>Corydoras Ambiacus</td>
+        </tr>
+        <tr>
+            <td>Skunk Corydoras</td>
+            <td>Corydoras Arcuatus</td>
+        </tr>
+        <tr>
+            <td>Spotback Corydoras</td>
+            <td>Corydoras Blochi</td>
+        </tr>
+        <tr>
+            <td>False Blochi Catfish</td>
+            <td>Corydoras Delphax</td>
+        </tr>
+    </table>
+
+    <style>
+        .table .column {
+            width: 300px;
+            float: left;
+        }
+
+        .table .column.first {
+            clear: left;
+        }
+    </style>
+
+    <h3>Cats</h3>
+    <div style="width: 620px;">
+        <div class="table">
+            <div class="column first"><b>Breed</b></div>
+            <div class="column"><b>Location of origin</b></div>
+            <div class="column first">Abyssinian </div>
+            <div class="column">Unspecified, but somewhere in Afro-Asia, likely Ethiopia</div>
+            <div class="column first">Aegean </div>
+            <div class="column">Greece</div>
+            <div class="column first">American Bobtail </div>
+            <div class="column">United States</div>
+            <div class="column first">American Curl </div>
+            <div class="column">United States</div>
+            <div class="column first">American Ringtail </div>
+            <div class="column">United States</div>
+            <div class="column first">American Shorthair </div>
+            <div class="column">United States</div>
+            <div class="column first">American Wirehair </div>
+            <div class="column">United States</div>
+            <div class="column first">Aphrodite Giant </div>
+            <div class="column">Cyprus</div>
+            <div class="column first">Arabian Mau </div>
+            <div class="column">the Arabian Peninsula</div>
+            <div class="column first">Asian </div>
+            <div class="column">Developed in United Kingdom;</div>
+        </div>
+    </div>
+</body>
+
+</html>

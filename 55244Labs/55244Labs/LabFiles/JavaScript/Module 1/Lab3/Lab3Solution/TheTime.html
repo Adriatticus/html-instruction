@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JavaScript Test</title>
+    </head>
+    <body>
+        The current time is <span id="currentTime"> time goes here! </span>
+
+        <script>
+            var timeSpan = document.getElementById("currentTime");
+            var now = new Date();
+            var time = now.toLocaleTimeString();
+            timeSpan.textContent = time;
+        </script>
+
+    </body>
+</html>

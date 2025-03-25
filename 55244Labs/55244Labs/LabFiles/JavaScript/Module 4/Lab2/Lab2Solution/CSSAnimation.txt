@@ -1,0 +1,15 @@
+\n\
+      @keyframes flyaway {  \n\
+      0% {  \n\
+          transition: 5s ease-in;  \n\
+        }  \n\
+        100% {  \n\
+          transform: translate(350px, 100px); \n\
+        }  \n\
+      }  \n\
+      \n\
+      #airplane1 {  \n\
+        animation: flyaway 10s ease-in forwards;  \n\
+        -moz-animation-iteration-count: 1;  \n\
+        animation-iteration-count: 1;   \n\
+      }  \n\  

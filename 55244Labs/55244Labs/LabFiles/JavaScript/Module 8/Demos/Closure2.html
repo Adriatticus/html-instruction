@@ -1,0 +1,34 @@
+<h2>Closure Demo 2</h2>
+
+<script>
+
+    var currentFunctionName = "";
+
+    var counter = 123; // a Globally scoped variable that has 
+                       // no impact on the following code!
+
+    function Count()
+    {
+        var counter = 0;
+
+        // return an object with two functions
+        return {
+            increment: function() { counter++; alert(currentFunctionName + " increment result: " + counter); },
+            decrement: function() { counter--; alert(currentFunctionName + " decrement result: " + counter); }
+        }
+    }
+
+    var myCount = Count();
+    currentFunctionName = "myCount"
+    myCount.increment();  // alert 1
+    myCount.increment();  // alert 2
+    myCount.increment();  // alert 3
+    myCount.decrement();  // alert 2
+    myCount.increment();  // alert 3
+
+    currentFunctionName = "myCount2"
+    var myCount2 = Count();
+    myCount2.increment();  // alert 1   myCount2 has its own "counter"
+    myCount2.increment();  // alert 2
+
+</script>

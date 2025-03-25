@@ -1,0 +1,66 @@
+<h2>Switch Statement</h2>
+
+(view and edit the code) <br><br>
+
+Enter a category from this list:<br>
+  furniture, toys, appliances, clocks, aquariums <br><br>
+
+Product Category: <input type="text" id="productCategory" />
+Location: <span id="location"></span>
+<br>
+<button onclick="GetLocation()">Get Location</button>
+
+<script>
+    function GetLocation() {
+        let productCategory = document.getElementById("productCategory").value.toLowerCase();
+        let location;
+
+
+        switch (productCategory) 
+        { 
+            case 'furniture' : 
+                location = 'Lexington'; 
+                break; 
+            case 'toys' : 
+                location = 'Cincinnati'; 
+                break;
+            case 'appliances' : // fall through
+            case 'clocks' :     // fall through
+            case 'aquariums' :  
+                location = 'Columbus'; 
+                break;
+            default :	// default is optional
+                location = 'Dayton';
+        }
+
+        document.getElementById("location").innerText = location;
+
+/*     
+        // The "if" equivalent to the above "switch" 
+        
+        if (productCategory == 'furniture')
+        {
+            location = 'Lexington';
+        }
+        else if (productCategory == 'toys')
+        {
+            location = 'Cincinnati';
+        }
+        else if (productCategory == 'appliances' ||
+                 productCategory == 'clocks' ||
+                 productCategory == 'aquariums' )
+        {
+            location = 'Columbus';
+        }
+        else
+        {
+            location = 'Dayton';
+        }
+
+        document.getElementById("location").innerText += " " + location;
+ */        
+
+    }
+
+
+</script>
