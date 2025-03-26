@@ -5,9 +5,21 @@
   </head>
   <body>
     <h2>The Time</h2>
+    <p id="paragraph">
 
+    </p>
     The current time is <span id="currentTime"> <i>time goes here!</i> </span><br />
     <button onclick="getElementById('currentTime').textContent = (new Date()).toLocaleTimeString();">Update the time</button>
-    <script></script>
+    <script>
+      var timeSpan = document.getElementById("currentTime");
+      var now = new Date();
+      var time = now.toLocaleTimeString();
+      console.log(timeSpan.textContent);
+      timeSpan.textContent = time;
+
+      var string = "I'm trying to get these words into the paragraph in the body"
+      var getPara = document.getElementById("paragraph");
+      getPara.textContent = string;
+    </script>
   </body>
 </html>
